@@ -1,17 +1,15 @@
-name: Ghink
+name: "Evelyne Groen's page"
 url: "http://evelynegroen.github.io/"
 description: "Uncertainty and sensitivity analysis in environmental impact models"
 disqus_shortname: "evelynegroen"
 use_leaflet: 1
-ga_domain: "ghink.cc"
-ga_id: "UA-45360427-2"
 blog_more_posts: 5
 prettify_theme: "ghink"
 markdown: redcarpet
 pygments: true
-paginate: 3
+paginate: 5
 paginate_path: "blog/page/:num"
-timezone: Europe/Lisbon
+timezone: Europe/Amsterdam
 redcarpet:
   extensions:
     - hard_wrap
