@@ -13,7 +13,7 @@ Food is essential to sustain and enhance human life. Nowadays, food production i
 <p>
 Quantifying the environmental impact of agricultural activities, such as crop or livestock production, requires great care, since the input data naturally vary due to, for example, seasonal changes, geographical conditions and socio-economic factors. Moreover, uncertainties, such as measurement errors in observations, exist around modeling of emissions and technical input parameters. Once you acknowledge that variability and uncertainties exist, questions arise such as: <em>how does variation of input parameters influence the results? Which input parameters explain most of the variation of the model output? Do input uncertainties have an effect on the comparison between the environmental impacts of two products?</em> To answer the questions raised by the acknowledgement of variability and uncertainty, one is naturally led to the field of uncertainty and sensitivity analysis.
 </p>
-<h7>Quantification of environmental impact</h7>
+<h6>Quantification of environmental impact</h6>
 <p>
 Quantification of environmental impact originating from the production and use of materials, substances or products from a chain perspective, based on physical principles, can be divided into two main approaches [Wrisberg et al., 2002]. (I) <em>Region-oriented approaches</em>, where the system boundary of a specific area and time interval (e.g., The Netherlands, 01/01/2015 until 31/12/2015) is the starting point to determine which activities are included. Region-oriented approaches can concern a specific year and economic sector, or all processes controlled by one company, such as a farm. Four examples of region-oriented approaches are: (1) material flow analysis, concerning material flows through a region or company, e.g. iron or plastics; (2) substance flow analysis, concerning specific elements such as nitrogen or phosphorus; (3) nutrient balance analysis, concerning input and output of nutrients or substances through a region or a farm; and (4) environmental input-output analysis, focusing on pollution of industrial trade of, e.g. a country. (II) <em>Function-oriented approaches </em>, where the function of the product is the starting point and defines the system boundary, ideally from cradle-to-grave. Function-oriented approaches can be time independent, but often consider the production of the final product for a specific year, and only processes from power plants, companies or farms are considered that belong to the studied production chain. Examples of function-oriented approaches are life cycle assessment and cumulative energy requirement analysis.
 </p>
@@ -23,7 +23,7 @@ A region-oriented approach widely used in agriculture is a nutrient balance anal
 <p>
 A function-oriented approach widely used in agriculture is life cycle assessment (LCA), which quantifies relevant resource use and emissions of a product over the entire production chain. LCA can be used to quantify all different types of environmental impacts (e.g. eutrophication, climate change, eco-toxicity), and is increasingly applied in agriculture [Guinée et al., 2010]. An environmental impact that is often considered related to livestock produc- tion is climate change, due to the large contribution of livestock to the global anthropogenic emissions of greenhouse gases [Gerber et al., 2013]. In such cases, one often speaks of the carbon footprint of an agricultural activity or product. An LCA can be used to identify where in the chain most emissions occur, and develop mitigation strategies to reduce these emissions.
 </p>
-<h7>Origins of variability and uncertainty in environmental modeling</h7>
+<h6>Origins of variability and uncertainty in environmental modeling</h6>
 <p>
 Nutrient balance analysis and life cycle assessments can both be used to develop a model that quantifies environmental impact. Collecting data for environmental impact assessment models is often perceived as a laborious task [Lloyd and Ries, 2007; Björklund, 2002]. Moreover, required data contains uncertainty due to measurement errors, or can vary widely due to natural circumstances. Most studies that quantify environmental impact, do not consider the impact of variability or uncertainties of input data on their result. Many studies aim at quantification of, for example, the carbon footprint of one kilogram of food. Most of these studies use only point values (i.e. a single value that represents a data point in the environmental impact assessment model) and overlook the range of possible realizations, and could therefore be misleading [Björklund, 2002], or might provide a false sense of accuracy [De Koning et al., 2010]. For example, nutrient balances can be used to benchmark farms, by means of quantifying the nutrient use efficiency (NUE). The NUE of one farm then is used to compare its environmental performance to other farms within the peer group. A higher NUE means that the farm is performing better. In such a situation, the peer group can learn from this farm, and incorporate similar mitigation strategies to improve their NUE. When incorporating measurements uncertainties in the calculation of the NUE, however, it might no longer be possible to rank the NUE of farms anymore, as it might not be possible to make a distinction in NUEs between the farms.
 </p>
@@ -76,7 +76,7 @@ Uncertainty analysis can be used to propagate epistemic uncertainties and natura
 In addition to the uncertainty analysis, a sensitivity analysis can be used to study the effect of input uncertainties on the output of an environmental impact assessment model. Two commonly used approaches for sensitivity analysis are local sensitivity analysis and global sensitivity analysis. Terminology often used in case of uncertainty analysis and sensitivity analysis is defined in Box 1.
 </p>
 <p>
-Box 1: EDefinitions of uncertainty (analysis) and sensitivity (analysis).
+Box 1: Definitions of uncertainty (analysis) and sensitivity (analysis).
  <div class="box">
             <table class="ink-table">
                 <thead>
@@ -86,10 +86,10 @@ Box 1: EDefinitions of uncertainty (analysis) and sensitivity (analysis).
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Uncertainty: a property attributable to an input parameter or an output parameter. In the context of this thesis it relates to quantitative uncer- tainty. Uncertainty of the input parameters can be given as a probability distribution function (for instance, a normal distribution with a speci- fied mean and standard deviation). Uncertainty analysis refers to the estimation of the uncertainty attribute of a model output using the un- certainty attributes of the model inputs.</td>
+                        <td><strong>Uncertainty</strong>: a property attributable to an input parameter or an output parameter. In the context of this thesis it relates to quantitative uncertainty. Uncertainty of the input parameters can be given as a probability distribution function (for instance, a normal distribution with a specified mean and standard deviation). <em>Uncertainty analysis</em> refers to the estimation of the uncertainty attribute of a model output using the uncertainty attributes of the model inputs.</td>
                     </tr>
                     <tr>
-                        <td>Sensitivity: a property attributable to how a model output behaves as the result of the variation of an input parameter [Saltelli et al., 2008]. There are three types of sensitivity analyses: (1) a local sensitivity analysis addresses what happens to the output when input parameters are changed, i.e. the intrinsic model behavior of a parameter. The pa- rameters that have the largest effect on the model output are referred to as the most influential parameters; (2) a screening analysis addresses what happens to the output based on the uncertainty range of the dif- ferent input parameters; and (3) a global sensitivity analysis addresses how much the uncertainty around each input parameter contributes to the output variance [Saltelli et al., 2008]. Both the screening analysis and the global sensitivity analysis combine the intrinsic model behav- ior with the information of uncertainty around input parameters. The parameters that change the model output most or explain most of the output variance are referred to as the most important parameters.</td>
+                        <td><strong>Sensitivity</strong>: a property attributable to how a model output behaves as the result of the variation of an input parameter [Saltelli et al., 2008]. There are three types of <em>sensitivity analyses</em>: (1) a <em>local sensitivity analysis </em>addresses what happens to the output when input parameters are changed, i.e. the intrinsic model behavior of a parameter. The parameters that have the largest effect on the model output are referred to as the most influential parameters; (2) a <em>screening analysis </em> addresses what happens to the output based on the uncertainty range of the different input parameters; and (3) a <em>global sensitivity analysis</em> addresses how much the uncertainty around each input parameter contributes to the output variance [Saltelli et al., 2008]. Both the screening analysis and the global sensitivity analysis combine the intrinsic model behavior with the information of uncertainty around input parameters. The parameters that change the model output most or explain most of the output variance are referred to as the most important parameters.</td>
 
                     </tr>
                 </tbody>
@@ -103,28 +103,26 @@ Most studies of environmental impact assessment models assume that the input par
 <p>
 A local sensitivity analysis quantifies the effect on the output when an input parameter is changed. For example, <em>what would be the effect on greenhouse gas emissions per kg of milk when a cow would produce 5% more milk with the same amount of feed?</em> In general, these type of methods consider the effect of a change independent of other input parameters and do not consider the actual range over which the input parameters can vary (Figure 1). These types of methods are especially useful when data availability is limited to point values.
 </p>
+<div class="all-40">
+      <img src="/assets/images/fig11local.jpg" /></a>
+      <p>Figure 1: An illustration of a local sensitivity analysis for a model with four input parameters (x1, ... , x4). Each input parameter is changed independently; the influence of parameter x1 for example, can be expressed as the effect of changing x1 on the output y.</p>
+    </div>
 <p>
 A screening analysis quantifies the effect on the output when an input pa- rameter is changed according the to uncertainty range of an input parameter. For example, what would be the effect on greenhouse gas emissions per kg of pork when variation of manure production in pigs vary with 3%? In general, this type of method also considers the effect of a change independent from other in- put parameters. These types of methods are especially useful when only little information is available on the input uncertainties.
 </p>
+<p></p>
+A global sensitivity analysis can be seen as an extension of uncertainty propagation: it determines how much each input parameter contributes to the output variance. A global sensitivity analysis considers the actual variation over all input parameters simultaneously (Figure 2). For example, <em>how much does the annual variation around crop yield of wheat contribute to the uncertainty around the greenhouse gas emissions? What is the impact of incorporation of covariance on the global sensitivity analysis?</em> In general (but not always), these methods require full knowledge of the input uncertainties (i.e. distribution functions) and information regarding the covariance if the input parameters are correlated.
+</p>
+</p>
+<div class="all-40">
+      <img src="/assets/images/fig2global.jpg" /></a>
+      <p>Figure 1: An illustration of a local sensitivity analysis for a model with four input parameters (x1, ... , x4). Each input parameter is changed independently; the influence of parameter x1 for example, can be expressed as the effect of changing x1 on the output y.</p>
+    </div>
+<p>
 
-Table 1.2: Definitions of uncertainty (analysis) and sensitivity (analysis).
-   Uncertainty versus Sensitivity
-Uncertainty: a property attributable to an input parameter or an output parameter. In the context of this thesis it relates to quantitative uncer- tainty. Uncertainty of the input parameters can be given as a probability distribution function (for instance, a normal distribution with a speci- fied mean and standard deviation). Uncertainty analysis refers to the estimation of the uncertainty attribute of a model output using the un- certainty attributes of the model inputs.
-
- 
-16 CHAPTER 1.
- x1 x2 x3 x4
-Model output
-y=f(x1, x2 , x3 , x4)
-xj
-  Model
-f(x1, x2 , x3 , x4)
-   y
-    Local sensitivity analysis
- Figure 1.1: An illustration of a local sensitivity analysis for a model with four input parameters (x1, . . . , x4). Each input parameter is changed indepen- dently; the influence of parameter x1 for example, can be expressed as the effect of changing x1 on the output y.
-
-A global sensitivity analysis can be seen as an extension of uncertainty propagation: it determines how much each input parameter contributes to the output variance. A global sensitivity analysis considers the actual varia- tion over all input parameters simultaneously (Figure 1.2). For example, how much does the annual variation around crop yield of wheat contribute to the uncer- tainty around the greenhouse gas emissions? What is the impact of incorporation of covariance on the global sensitivity analysis? In general (but not always), these methods require full knowledge of the input uncertainties (i.e. distribution functions) and information regarding the covariance if the input parameters are correlated.
+<p>
 Incorporating uncertainty in an environmental impact assessment model will strengthen the model outcomes. It will provide knowledge about the range of model outputs, which enables more informed decision-making. At present, however, a standardized methodology how to propagate uncertain- ties or which type of sensitivity analysis to use, is missing.
+</p>
 1.3. KNOWLEDGEGAPS 17
 Figure 1.2: An illustration of a global sensitivity analysis for a model with four parameters: the variance decomposition (pie chart) explains the output vari- ance (histogram), given the distribution functions of the four input parameters on the left hand side of the figure.
 1.3 Knowledge gaps
@@ -166,6 +164,6 @@ Figure 1.3: Main methodological focus in each chapter. T: theory, A: applica- ti
 An overview of the applied methods in each chapter can be found in Fig-
 ure 1.3.
 </p>
-<p>[Tilman and Clark, 2014] [Bajželj et al., 2014[Steinfeld et al., 2006] [Gerber et al., 2013]][Wrisberg et al., 2002]Sutton et al., 2013] [Suh and Yee, 2011]Guinée et al., 2010]. [Aarts et al., 1992; Schröder et al., 2003; Lesschen et al., 2011][Lloyd and Ries, 2007; Björklund, 2002][De Koning et al., 2010] [Walker et al., 2003]Bojacá and Schrevens, 2010</p>
+<p>[Tilman and Clark, 2014] [Bajželj et al., 2014[Steinfeld et al., 2006] [Gerber et al., 2013]][Wrisberg et al., 2002]Sutton et al., 2013] [Suh and Yee, 2011]Guinée et al., 2010]. [Aarts et al., 1992; Schröder et al., 2003; Lesschen et al., 2011][Lloyd and Ries, 2007; Björklund, 2002][De Koning et al., 2010] [Walker et al., 2003]Bojacá and Schrevens, 2010[Saltelli et al., 2008]</p>
 </div>
 </div>
