@@ -6,7 +6,7 @@ title: Discussion
 
     <div class="all-66 small-100 medium-66">
 <h4>Discussion of uncertainty analysis and sensitivity analysis in environmental impact assessment models</h4>
-<h6>Background</h6>
+<h6>1. Background</h6>
 <p>
 The challenge to produce food in an environmentally friendly way has be- come urgent [Steinfeld et al., 2006; Gerber et al., 2013]. To develop strategies to produce food with a low environmental impact, environmental assessment models are developed that quantify the total environmental impact associated with food production, such as life cycle assessment or nutrient balance analysis. Input data required for these environmental impact assessment models, however, may vary due to seasonal changes, geographical conditions or socio-economic factors (natural variability) Moreover, input data may be uncertain, due to measurement errors and observational errors that exist around modeling of emissions and technical parameters (epistemic uncertainty). Although agricultural activities and food production are prone to natural variability and epistemic uncertainty, very few case studies made a thorough examination of the effects of variability and uncertainty on the result.
 </p>
@@ -15,8 +15,8 @@ The aim of this thesis was to enhance understanding the effects of vari- ability
 <p>
 This chapter starts with discussing the value of uncertainty analysis and sensitivity analysis in environmental impact assessment models, followed by the value of matrix notation. Subsequently, recommendation of the use of methods for uncertainty and sensitivity analysis are given. This chapter ends with an overview of the conclusions.</p>
 
-<h6>The value of uncertainty analysis and sensitivity analysis in environmental impact assessment models</h6>
-<h6>Local sensitivity analysis</h6>
+<h6>2. The value of uncertainty analysis and sensitivity analysis in environmental impact assessment models</h6>
+<h6>2.1 Local sensitivity analysis</h6>
 <p>
 Local sensitivity analysis in environmental impact assessment models, such as life cycle assessment (LCA) and nutrient balance (NB) analysis, are generally performed using a one-at-a-time (OAT) approach. An OAT approach takes a parameter, increases it e.g. 5% and quantifies the effect on the model output. OAT approaches in LCA or NB analysis usually consider a subset of all available parameters, based on expert judgment or perhaps a quantitative criterion, such as the contribution of the individual input parameter to the total environmental impact. However, when the selection of the input parameters considered for the local sensitivity analysis is based on such principles, influential (technical) parameters might be overlooked. For example, efficiency parameters (e.g. replacement rate or reproductive performance) are not di- rectly related to emissions, only to their prior production processes. These subsets, therefore, might not contain all potential influential parameters. A systematic approach that considers the influence of all input parameters in LCA can only be done using the multiplier method.
 </p>
@@ -37,7 +37,7 @@ Referring to modeling decisions as a sensitivity analysis or including un- certa
 Developing a standardized definition and method for local sensitivity analysis in LCA and NB analysis, will increase comprehensibility between studies and will enhance comparability of results.
 </p>
 
-<h6>Uncertainty analysis</h6>
+<h6>2.2 Uncertainty analysis</h6>
 <p>
 Uncertainty propagation refers to propagation of uncertainty and variability around input parameters through an environmental impact assessment model to generate output data. Uncertainty analysis refers the subsequent analysis of the generated output data, such as determining the output variance, deter- mining a confidence interval etc.</p>
 <p>
@@ -53,7 +53,7 @@ To implement a correlation coefficient between input parameters during uncertain
 <p>
 We conclude, therefore, that both sampling and analytical uncertainty propagation are indispensible in environmental impact assessment models. The analytical approach is especially useful when data is limited (e.g. only the variance of the input parameters is available). In contrast, the sampling approaches are more suitable when full knowledge is available (e.g. a distribution function, including a parameter of dispersion).</p>
 
-<h6>Global sensitivity analysis</h6> 
+<h6>2.3 Global sensitivity analysis</h6> 
 <p></p>
 A global sensitivity analysis quantifies the contribution of the variances of the individual input parameters to output variance. More specifically, a sensitivity index explains how much each input parameter contributes to the output variance. For example, the squared standardized regression coefficients can be interpreted as a sensitivity index. In <em>[paper under review]</em>, we compared rather com- mon methods for global sensitivity analysis in LCA, namely methods based on regression or correlation approaches [Geisler et al., 2005] and key issue analysis [Heijungs, 1996], to less commonly applied methods in LCA, such as the Sobol’ method and random balance design.</p>
 <p>
@@ -76,67 +76,179 @@ Currently in the ISO standard for LCA, there is no method recommended for a glob
             <table class="ink-table">
                 <thead>
                     <tr>
-                        <th>Category</th>
-                        <th>Examples of sources</th>
+                        <th>Parameter (CV)</th>
+                        <th>Analysis of output variance by:</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Natural variablity</td>
-                        <td>Climate variability, soil type, genetic differences, variation in temperature, differences in manage- ment strategies, geographical differences, consumer preferences</td>
+                        <td></td>
+                        <td>Squared standardized regression coefficients</td>
+                        <td>Standardized regression coefficients</td>
+                        <td>Regression coefficients</td>
+                        <td>Squared correlation coefficients</td>
+                         <td>Correlation coefficients</td>
 
                     </tr>
                     <tr>
-                        <td>Epistemic uncertainty</td>
-                        <td>Measurement errors, errors in observations, errors of measurement instruments, estimates of experts, lack of knowledge</td>
+                        <td>1. (15.0%) </td>
+                        <td> 58.1% </td>
+                        <td> -0.762 </td>
+                        <td> -13.0 </td>
+                        <td> 56.4% </td>
+                        <td> -0.751 </td>
                     </tr>
+                    <tr>
+                        <td>2. (11.5%) </td>
+                        <td> 1.08%</td>
+                        <td> -0.104 </td>
+                        <td> -11.6 </td>
+                        <td> 1.15% </td>
+                        <td> -0.107</td>
+                    </tr>
+                      <tr>
+                        <td>3. (-) </td>
+                        <td> - </td>
+                        <td> - </td>
+                        <td> - </td>
+                        <td> - </td>
+                        <td> - </td>
+                    </tr>
+                     <tr>
+                        <td>4. (20.0%) </td>
+                        <td> 3.53% </td>
+                        <td> -0.188 </td>
+                        <td> -0.241 </td>
+                        <td> 5.10% </td>
+                        <td> -0.226 </td>
+                    </tr>
+                     <tr>
+                        <td>5. (15.0%) </td>
+                        <td> 34.7% </td>
+                        <td> 0.589 </td>
+                        <td> 100 </td>
+                        <td> 35.9% </td>
+                        <td> 0.599 </td>
+                    </tr>
+                     <tr>
+                        <td>6. (8.00%) </td>
+                        <td> 0.45% </td>
+                        <td> 0.0699 </td>
+                        <td> 2.13 </td>
+                        <td> 0.590% </td>
+                        <td> 0.0766 </td>
+                    </tr>
+                    <tr>
+                        <td>Total explained output variance </td>
+                        <td> 99.0%</td>
+                        <td> n.a. </td>
+                        <td> n.a. </td>
+                        <td> 99.0% </td>
+                        <td> n.a. </td>
+                    </tr>
+                    
                 </tbody>
             </table>
 </div>
  </p>
-  Parameter (CV)
-1 (15.0%)
-2 (11.5%)
-3(–)
-4 (20.0%)
-5 (15.0%)
-6 (8.00%)
-Total explained output variance
-Analysis of output variance by:
-Squared
-Standardized Standardized
-regression regression Regression
-coefficients coefficients coefficients 58.10% 0.762 –13
-1.08% 0.104 –11.6
-– – –
-3.53% 0.188 –0.241 34.70% 0.589 100 0.45% 0.0669 2.13 99% n.a. n.a.
-Squared
-correlation Correlation coefficients coefficients 56.40% –0.751 1.15% –0.107
-– – 5.10% –0.226 35.90% 0.599 0.59% 0.0766 99% n.a.
-  8.2.4 The value of matrix notation in environmental impact assessment models
-The environmental impact assessment models described in this thesis, LCA and NB analysis, both rely on matrix notation, to facilitate the application of uncertainty and sensitivity analysis. In matrix notation, the production processes are described by technical parameters given in the A-matrix. The corresponding emissions (and resource use) is given in the B-matrix. One may wonder, does matrix notation have any added value for sensitivity analysis? Uncertainty propagation using Monte Carlo simulation and global sensitiv- ity analysis by means of standardized regression coefficients can also be per- formed for environmental impact models that do not make use of matrix no- tation. However, performing an analytical local sensitivity analysis that con- siders all input parameters, such as the multiplier method, applied in <em>[paper under review]</em> and <em>[paper under review]</em>, requires a functional form of the impact assessment model, such as the matrix-based approach developed by [Heijungs and Suh, 2002]. Although other functional forms have been proposed [Ciroth et al., 2004; Clavreul et al., 2013] matrix notation seems to be the most straightforward approach.
-197
-8.2. VALUEOFUNCERTAINTY&SENSITIVITYANALYSIS CHAPTER8.
-When we also consider correlations between input parameters, the alge- braic notation gives clear insight into the effect of the correlations on the un- certainty propagation (<em>[paper under review]</em>). Using matrix notation, it was possible to predict the effect of including correlations during uncertainty propagation on the output variance and the global sensitivity analysis. Without the matrix formulation, it would have been impossible to make a sweeping generaliza- tion towards all different kind of case studies. To facilitate sensitivity analysis, matrix notation in LCA may not be eminent to implement uncertainty and sensitivity analysis, but is facilitates the algorithm implementation required to perform the methods, which otherwise would have been cumbersome to implement.
-In Chapter <em>[paper under review]</em> and <em>[paper under review]</em>, greenhouse gas emissions were calculated for pork pro- duction and milk production respectively. To quantify the greenhouse gasses for crop cultivation, manure management and enteric fermentation, equations were implemented between the technical parameters in the A-matrix (e.g. fer- tilizer applied, manure produced and feed intake) and the GHG emissions in the B-matrix. For example, for the emissions of crop cultivation, the CO2 and indirect and direct N2O emissions depended directly on the application of fertilizers and crop yield.
-The aggregation level of the production process determined which param- eters showed up in the local and global sensitivity analysis. For example, in <em>[paper under review]</em>, we showed that CH4 emissions of manure turned out to be in- fluential However, the sensitivity analysis was modeled on the level of the total emissions, reflecting the parameters in the A and B matrix. Therefore, the influence of underlying factors determined by the type of manure storage system, such as the methane producing capacity, depending on temperature, wind speed etc., remains unknown. Further expanding crop and livestock models in LCA and NB analysis, can help to explain which underlying fac- tors are important to make better estimations regarding environmental im- pacts. Future improvements can also be made regarding implementation of non-linear relationships. For example, it was assumed that N-fertilization and crop yield were correlated. At some stage, however, one additional input of N-fertilizer will increase crop yield less than the previous unit of input, a phe- nomenon referred to as the law of diminishing returns. Therefore, a non-linear dependency, combined with a correlation factor (i.e. other circumstances, such as soil pH and humidity influence the dependency as well), might be a bet- ter representation of reality. Expanding knowledge on potential relationships
-198
  
-CHAPTER8. 8.3. RECOMMENDATIONS
-between input parameters, establish equations to implement these relations in environmental impact assessment models, and combine these equations with correlations between input parameters, can improve further assessments using environmental impact models. If the matrix notation might need to be adapted, or expanded to allow for the extensions of livestock models and underlying relations needs to be further developed.
-8.3 Recommendations for future implementation of uncertainty and sensitivity analysis
-8.3.1 Recommended analysis and methods
-The uncertainty or sensitivity analysis to be applied depends on the ques- tion to be addressed and the available information. An overview of research questions (formulated generally) related to the type of analysis and the recom- mended method based on the results of this thesis can be found in Table 8.2.
+<h6>2.4 The value of matrix notation in environmental impact assessment models</h6>
+<p>
+The environmental impact assessment models described in this thesis, LCA and NB analysis, both rely on matrix notation, to facilitate the application of uncertainty and sensitivity analysis. In matrix notation, the production processes are described by technical parameters given in the <strong>A</strong>-matrix. The corresponding emissions (and resource use) is given in the <strong>B</strong>-matrix. One may wonder, does matrix notation have any added value for sensitivity analysis? Uncertainty propagation using Monte Carlo simulation and global sensitivity analysis by means of standardized regression coefficients can also be performed for environmental impact models that do not make use of matrix notation. However, performing an analytical local sensitivity analysis that considers all input parameters, such as the multiplier method, applied in <em>[paper under review]</em> and <em>[paper under review]</em>, requires a functional form of the impact assessment model, such as the matrix-based approach developed by [Heijungs and Suh, 2002]. Although other functional forms have been proposed [Ciroth et al., 2004; Clavreul et al., 2013] matrix notation seems to be the most straightforward approach.
+</p>
+<p>
+When we also consider correlations between input parameters, the alge- braic notation gives clear insight into the effect of the correlations on the uncertainty propagation (<em>[paper under review]</em>). Using matrix notation, it was possible to predict the effect of including correlations during uncertainty propagation on the output variance and the global sensitivity analysis. Without the matrix formulation, it would have been impossible to make a sweeping generalization towards all different kind of case studies. To facilitate sensitivity analysis, matrix notation in LCA may not be eminent to implement uncertainty and sensitivity analysis, but is facilitates the algorithm implementation required to perform the methods, which otherwise would have been cumbersome to implement.
+</p>
+<p>
+In Chapter <em>[paper under review]</em> and <em>[paper under review]</em>, greenhouse gas emissions were calculated for pork production and milk production respectively. To quantify the greenhouse gasses for crop cultivation, manure management and enteric fermentation, equations were implemented between the technical parameters in the <strong>A</strong>-matrix (e.g. fertilizer applied, manure produced and feed intake) and the GHG emissions in the <strong>B</strong>-matrix. For example, for the emissions of crop cultivation, the CO2 and indirect and direct N<sub>2</sub>O emissions depended directly on the application of fertilizers and crop yield.
+</p>
+<p>
+The aggregation level of the production process determined which parameters showed up in the local and global sensitivity analysis. For example, in <em>[paper under review]</em>, we showed that CH<sub>4</sub> emissions of manure turned out to be influential However, the sensitivity analysis was modeled on the level of the total emissions, reflecting the parameters in the <strong>A</strong>- and <strong>B</strong>-matrix. Therefore, the influence of underlying factors determined by the type of manure storage system, such as the methane producing capacity, depending on temperature, wind speed etc., remains unknown. Further expanding crop and livestock models in LCA and NB analysis, can help to explain which underlying factors are important to make better estimations regarding environmental impacts. Future improvements can also be made regarding implementation of non-linear relationships. For example, it was assumed that N-fertilization and crop yield were correlated. At some stage, however, one additional input of N-fertilizer will increase crop yield less than the previous unit of input, a phenomenon referred to as the law of diminishing returns. Therefore, a non-linear dependency, combined with a correlation factor (i.e. other circumstances, such as soil pH and humidity influence the dependency as well), might be a better representation of reality. Expanding knowledge on potential relationships between input parameters, establish equations to implement these relations in environmental impact assessment models, and combine these equations with correlations between input parameters, can improve further assessments using environmental impact models. If the matrix notation might need to be adapted, or expanded to allow for the extensions of livestock models and underlying relations needs to be further developed.</p>
+
+<h6>3. Recommendations for future implementation of uncertainty and sensitivity analysis</h6>
+<h6>3.1 Recommended analysis and methods</h6>
+<p>
+The uncertainty or sensitivity analysis to be applied depends on the ques- tion to be addressed and the available information. An overview of research questions (formulated generally) related to the type of analysis and the recommended method based on the results of this thesis can be found in Table 2.</p>
+
+Table 2: Methods for uncertainty analysis and sensitivity analysis corresponding to research questions addressed.
+ <div class="box">
+            <table class="ink-table">
+                <thead>
+                    <tr>
+                        <th>  Research questions corresponding to type of uncertainty or sensitivity analysis </th>
+                        <th> Preferred method </th>
+                        <th> Data requirements </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><em>A. Local sensitivity analysis </em></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>A.1. Which parameter changes the output value most? </td>
+                        <td> Multiplier method </td>
+                        <td> Point values2 </td>
+                    </tr>
+                    <tr>
+                        <td>A.2. Which parameters are most influential?</td>
+                        <td> </td>
+                        <td>  </td>
+                    </tr>
+                      <tr>
+                        <td>A.3. Of which parameters a high data quality is most urgent? </td>
+                        <td>  </td>
+                        <td>  </td>
+                    </tr>
+                     <tr>
+                        <td>4. (20.0%) </td>
+                        <td> 3.53% </td>
+                        <td> -0.188 </td>
+                        <td> -0.241 </td>
+                        <td> 5.10% </td>
+                        <td> -0.226 </td>
+                    </tr>
+                     <tr>
+                        <td>5. (15.0%) </td>
+                        <td> 34.7% </td>
+                        <td> 0.589 </td>
+                        <td> 100 </td>
+                        <td> 35.9% </td>
+                        <td> 0.599 </td>
+                    </tr>
+                     <tr>
+                        <td>6. (8.00%) </td>
+                        <td> 0.45% </td>
+                        <td> 0.0699 </td>
+                        <td> 2.13 </td>
+                        <td> 0.590% </td>
+                        <td> 0.0766 </td>
+                    </tr>
+                    <tr>
+                        <td>Total explained output variance </td>
+                        <td> 99.0%</td>
+                        <td> n.a. </td>
+                        <td> n.a. </td>
+                        <td> 99.0% </td>
+                        <td> n.a. </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+</div>
+
+
+<p>
 For example, in <em>[paper under review]</em>, very limited data were available and we were interested in determining which input parameters were most influential. There- fore a local sensitivity analysis, using the multiplier method was applied (question A.2, Table 8.2). In addition, a global sensitivity was applied (ques- tion D.2, Table 8.2), for those parameters, which either turned out to be in- fluential, or were known to be uncertain, based on literature. In Chapter 6, full knowledge was available regarding the input parameters including corre- lations between some of the input parameters. We applied a global sensitivity analysis, to determine which parameters were most important to the output variance (question E.1 Table 8.2), which parameters could be set to a fixed value in improved data collections (question E.1, Table 8.2) and if correlations among parameters influenced the output variance (question C.3/E. Table 8.2). In Chapter 7, we studied benchmarking farms while accounting for en epis- temic uncertainties of input parameters (question B.6, Table 8.2) and identi- fying which input parameters explain most of the output variance (question C.3, Table 8.2).
 199
  
 8.3. RECOMMENDATIONS CHAPTER8.
-Table 8.2: Methods for uncertainty analysis and sensitivity analysis corre- sponding to research questions addressed.
-  Research questions corresponding to type of uncertainty or sensitivity analysis
+
 A. Local sensitivity analysis
-1. Which parameter changes the output value most?
-2. Which parameters are most influential?
-3. Of which parameters a high data quality is most urgent?
+
+
+
 4. Which parameters are unlikely to influence the model output?
 5. On which parameters should be focused for potential mitigation strategies, based on innovations?
 B. Uncertainty analysis (neglecting correlation)
