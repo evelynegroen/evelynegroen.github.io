@@ -189,7 +189,7 @@ Table 2: Methods for uncertainty analysis and sensitivity analysis corresponding
                     <tr>
                         <td>A.1. Which parameter changes the output value most? </td>
                         <td> Multiplier method </td>
-                        <td> Point values2 </td>
+                        <td> Point values </td>
                     </tr>
                     <tr>
                         <td>A.2. Which parameters are most influential?</td>
@@ -202,36 +202,133 @@ Table 2: Methods for uncertainty analysis and sensitivity analysis corresponding
                         <td>  </td>
                     </tr>
                      <tr>
-                        <td>4. (20.0%) </td>
-                        <td> 3.53% </td>
-                        <td> -0.188 </td>
-                        <td> -0.241 </td>
-                        <td> 5.10% </td>
-                        <td> -0.226 </td>
-                    </tr>
-                     <tr>
-                        <td>5. (15.0%) </td>
-                        <td> 34.7% </td>
-                        <td> 0.589 </td>
-                        <td> 100 </td>
-                        <td> 35.9% </td>
-                        <td> 0.599 </td>
-                    </tr>
-                     <tr>
-                        <td>6. (8.00%) </td>
-                        <td> 0.45% </td>
-                        <td> 0.0699 </td>
-                        <td> 2.13 </td>
-                        <td> 0.590% </td>
-                        <td> 0.0766 </td>
+                        <td>A.4. Which parameters are unlikely to influence the model output?</td>
+                        <td></td>
+                        <td></td>
                     </tr>
                     <tr>
-                        <td>Total explained output variance </td>
-                        <td> 99.0%</td>
-                        <td> n.a. </td>
-                        <td> n.a. </td>
-                        <td> 99.0% </td>
-                        <td> n.a. </td>
+                        <td> A.5. On which parameters should be focused for potential mitigation strategies, based on innovations? </td>
+                        <td></td>
+                        <td></td>
+                        </tr>
+                        <tr></tr>
+                        <td> <em>B. Uncertainty analysis (neglecting correlation)</em> </td>
+                        <td></td>
+                        <td></td>
+                        </tr>
+                        <tr>
+                        <td> B.1. Which product alternative is better when uncertainties are incorporated? </td>
+                        <td>Uncertainty propagation via e.g. Monte Carlo sampling</td>
+                        <td>Distribution functions, including a parameter of dispersion (e.g. variance)</td>
+                        </tr>
+                        <td>B.2. What is the likelihood that one product alternative performs better than the other?% </td>
+                          <td></td>
+                            <td></td>
+                            <tr>
+                        <td> B.3. Does the environmental impact of a product exceed the allowed boundary? </td>
+                          <td></td>
+                            <td></td>
+                    </tr>
+                     <tr>
+                        <td>  B.4. What is the confidence interval of the mean model output?</td>
+                          <td></td>
+                            <td></td>
+                            </tr>
+                            <tr>
+                        <td> B.5. What are the 2.5 and 97.5 percentile values of the model output?</td>
+                          <td></td>
+                            <td></td>
+                            </tr>
+                            <tr>
+                        <td>B.6. What happens to the output variance when input uncertainties are reduced? </td>
+                        <td>  </td>
+                        <td> </td>
+                    </tr>
+                     <tr>
+                        <td><em>C. Uncertainty analysis (including correlations) </em></td>
+                        <td>  </td>
+                        <td> </td>
+                          </tr>
+                            <tr>
+                        <td> C.1. Will correlations between input parameters increase or decrease the output variance? </td>
+                        <td> Uncertainty propagation, adjusted for correlated sampling </td>
+                        <td> Distributions functions, covariance matrix </td>
+                          </tr>
+                            <tr>
+                        <td> C.2. How big is the effect of ignoring correlations on the output variance?</td>
+                        <td> <em>or:</em>: analytical uncertainty propagation, adjusted correlated input parameters </td>
+                        <td> or: covariance matrix</td>
+                          </tr>
+                            <tr>
+                        <td> C.3. Will correlations affect results or decisions? </td>
+                        <td>  </td>
+                        <td> </td>
+                          </tr>
+                            <tr>
+                        <td> D. Global sensitivity analysis </td>
+                        <td>  </td>
+                        <td> </td>
+                          </tr>
+                            <tr>
+                        <td>D.1. On which parameters should improved data collection be focused?</td>
+                        <td> Method of elementary effect </td>
+                        <td> Range (min and max value)</td>
+                    </tr>
+                    <tr>
+                        <td> D.2. Which parameters are most important for the output uncertainty?</td>
+                        <td> <em>or:</em> Regression (or correlation) based method </td>
+                        <td><em>or:</em>distribution functions </td>
+                          </tr>
+                            <tr>
+                        <td> D.3. Of which parameters should (epistemic) uncertainties be reduced to im- prove reliability of results? </td>
+                        <td> <em>or:</em> Key issue analysis </td>
+                        <td>  <em>or:</em> variance</td>
+                          </tr>
+                            <tr>
+                        <td> D.4. Which parameters can be set to a fixed value to decrease data collection efforts of future studies? </td>
+                        <td>  Regression (or correlation) based method </td>
+                        <td> Distribution functions</td>
+                          </tr>
+                            <tr>
+                        <td> D.5. Which parameters contribute most to the output variance? </td>
+                        <td> <em>or:</em> Key issue analysis </td>
+                        <td> <em>or:</em>variance</td>
+                          </tr>
+                            <tr>
+                        <td> D.6. Can decreasing epistemic uncertainties of the most important input parameters reduce the output variance? </td>
+                        <td>  </td>
+                        <td> </td>
+                          </tr>
+                            <tr>
+                        <td>E. Global sensitivity analysis (including correlations)</td>
+                        <td>  </td>
+                        <td> </td>
+                          </tr>
+                            <tr>
+                        <td>E.1. Which parameters can be set to a fixed value to decrease data collection efforts of future studies?</td>
+                        <td> Regression (or correlation) based method </td>
+                        <td> Distributions functions, covariance matrix</td>
+                          </tr>
+                            <tr>
+                        <td>E.2. Which parameters contribute most to the output variance?</td>
+                        <td> <em>or:</em> Key issue analysis adjusted for correlated input parameters</td>
+                        <td> <em>or:</em> covariance matrix</td>
+                          </tr>
+                            <tr>
+                        <td>E.3. Does correlation influence the importance of input parameters?</td>
+                        <td>  </td>
+                        <td> </td>
+                          </tr>
+                            <tr>
+                        <td>E.4. Can correlations be ignored?</td>
+                        <td>  </td>
+                        <td> </td>
+                          </tr>
+                            <tr>
+                        <td>E.5. On which correlation coefficients should data collection be focused?</td>
+                        <td>  </td>
+                        <td> </td>
+                        
                     </tr>
                     
                 </tbody>
@@ -240,98 +337,33 @@ Table 2: Methods for uncertainty analysis and sensitivity analysis corresponding
 
 
 <p>
-For example, in <em>[paper under review]</em>, very limited data were available and we were interested in determining which input parameters were most influential. There- fore a local sensitivity analysis, using the multiplier method was applied (question A.2, Table 8.2). In addition, a global sensitivity was applied (ques- tion D.2, Table 8.2), for those parameters, which either turned out to be in- fluential, or were known to be uncertain, based on literature. In Chapter 6, full knowledge was available regarding the input parameters including corre- lations between some of the input parameters. We applied a global sensitivity analysis, to determine which parameters were most important to the output variance (question E.1 Table 8.2), which parameters could be set to a fixed value in improved data collections (question E.1, Table 8.2) and if correlations among parameters influenced the output variance (question C.3/E. Table 8.2). In Chapter 7, we studied benchmarking farms while accounting for en epis- temic uncertainties of input parameters (question B.6, Table 8.2) and identi- fying which input parameters explain most of the output variance (question C.3, Table 8.2).
-199
- 
-8.3. RECOMMENDATIONS CHAPTER8.
+For example, in <em>[paper under review]</em>, very limited data were available and we were interested in determining which input parameters were most influential. Therefore a local sensitivity analysis, using the multiplier method was applied (question A.2, Table 2). In addition, a global sensitivity was applied (question D.2, Table 2), for those parameters, which either turned out to be in- fluential, or were known to be uncertain, based on literature. In Chapter 6, full knowledge was available regarding the input parameters including correlations between some of the input parameters. We applied a global sensitivity analysis, to determine which parameters were most important to the output variance (question E.1 Table 2), which parameters could be set to a fixed value in improved data collections (question E.1, Table 2) and if correlations among parameters influenced the output variance (question C.3/E.3 Table 2). In <em>[paper under review]</em>, we studied benchmarking farms while accounting for en epistemic uncertainties of input parameters (question B.6, Table 2) and identifying which input parameters explain most of the output variance (question C.3, Table 2).
+</p>
 
-A. Local sensitivity analysis
-
-
-
-4. Which parameters are unlikely to influence the model output?
-5. On which parameters should be focused for potential mitigation strategies, based on innovations?
-B. Uncertainty analysis (neglecting correlation)
-1. Which product alternative is better when uncertainties are incorporated?
-2. What is the likelihood that one product alternative performs better than the other?
-3. Does the environmental impact of a product exceed the allowed boundary? 4. What is the confidence interval of the mean model output?
-5. What are the 2.5 and 97.5 percentile values of the model output?
-6. What happens to the output variance when input uncertainties are re- duced?
-C. Uncertainty analysis (including correlations)
-1. Will correlations between input parameters increase or decrease the output variance?
-2. How big is the effect of ignoring correlations on the output variance?
-3. Will correlations affect results or decisions?
-D. Global sensitivity analysis
-1. On which parameters should improved data collection be focused?
-2. Which parameters are most important for the output uncertainty?
-3. Of which parameters should (epistemic) uncertainties be reduced to im- prove reliability of results?
-4. Which parameters can be set to a fixed value to decrease data collection efforts of future studies?
-5. Which parameters contribute most to the output variance?
-6. Can decreasing epistemic uncertainties of the most important input pa- rameters reduce the output variance?
-E. Global sensitivity analysis (including correlations)
-1. Which parameters can be set to a fixed value to decrease data collection efforts of future studies?
-2. Which parameters contribute most to the output variance?
-3. Does correlation influence the importance of input parameters?
-4. Can correlations be ignored?
-5. On which correlation coefficients should data collection be focused?
-Preferred method in this thesis
-Multiplier method
-Uncertainty propagation via e.g. Monte Carlo sampling
-Uncertainty propagation, adjusted for correlated sampling
-or:
-analytical uncertainty propagation, adjusted correlated input parameters
-Method of elementary effect
-or:
-Regression (or correlation) based method
-or:
-key issue analysis
-Regression (or correlation) based method
-or:
-key issue analysis
-Regression (or correlation) based method
-or:
-Key issue analysis adjusted for corre- lated input parameters
-Data requirements
-Point values
-Distribution functions, including a pa- rameter of dispersion (e.g. variance)
-Distributions functions, covariance matrix
-or:
-covariance matrix
-Range (min and max value)
-or:
-distribution functions
-or:
-variance
-Distribution functions
-or:
-variance
-Distributions functions, covariance matrix
-or:
-covariance matrix
-  8.3.2 Combining local and global sensitivity analysis
-Environmental impact assessment models, such as LCA, are based on many input parameters; therefore, it might be difficult to collect high quality data for all input parameters. A parallel implementation of local and global sensi- tivity analysis, such as in Chapter 2 and Chapter 6, gives a direct overview of the most influential (identified by a local sensitivity analysis) and important (identified by a global sensitivity analysis) model parameters. Parameters that are considered to be both influential and important, are considered to be the most essential parameters in the model, and can be used to further improve reliability or for development of mitigation strategies (Figure 8.1).
-200
-CHAPTER8. 8.3. RECOMMENDATIONS
-  High Important parameters
-Essential parameters
-Influential parameters
-High
-Importance
-Low
-Minor parameters
- Low
-Influence
-Figure 8.1: Parallel incorporation of local and global sensitivity analysis. Adapted from Heijungs [1996].
-The importance of a parameter can originate from variability or epistemic uncertainty. A distinction between variability and uncertainty may in prac- tice not be straightforward. However, it facilitates directions of mitigation strategies, which can be focused on essential parameters containing natural variability, and improvement of reliability, which can be focused on essential parameters that contain epistemic uncertainties (Figure 8.1).
-Examples of parameters that are important, but not influential, are N- fertilizer rates of crop cultivation (as we showed in Chapter 6). The impor- tance of these parameters is caused by, for example, variability in N-fertilizer rates between years. An example of parameters that are influential, but not important are parameters that can be estimated very accurately, for example, the production of N-fertilizers, and can for example be improved by innova- tions.
-In Chapter 2, we focused on developing mitigation strategies and improv- ing reliability of results. By combining local and global sensitivity analysis the most essential input parameters for environmental impact assessment in the pork production chain can be identified. Combining the results of these two analyses allowed to derive mitigation options, either based on innovations (e.g. novel feeding strategies) or on management strategies (e.g. reducing
-201
-8.4. CONCLUSIONS CHAPTER8.
-mortality rate), and to formulate options for improving reliability of results (e.g. decreasing epistemic uncertainties). Also reliability could be improved if data quality of the most essential parameters were improved.
-In Chapter 6, we focused on improving reliability of results only. By com- bining a local and a global sensitivity analysis, parameters could be deter- mined which are essential to assess GHG of milk production, focusing only on the reliability of the results. Essential parameters are the emission factor of CH4 emissions from enteric fermentation, milk yield; DM feed intake of the dairy cows and the emission factor of direct N2O emission of crop cultivation. Future research can focus on reducing uncertainty and improving data quality of the most essential parameters.
-A local and global sensitivity analysis should, therefore, be seen as com- plementary. Moreover, in most environmental impact assessment models, data availability is limited and combining local and global sensitivity anal- ysis makes sure that parameters are not overlooked.
+<h6>3.2 Combining local and global sensitivity analysis</h6>
+<p>
+Environmental impact assessment models, such as LCA, are based on many input parameters; therefore, it might be difficult to collect high quality data for all input parameters. A parallel implementation of local and global sensitivity analysis, such as in <em>[paper under review]</em> and <em>[paper under review]</em>, gives a direct overview of the most influential (identified by a local sensitivity analysis) and important (identified by a global sensitivity analysis) model parameters. Parameters that are considered to be both influential and important, are considered to be the most essential parameters in the model, and can be used to further improve reliability or for development of mitigation strategies (Figure 1).</p>
 
 </p>
+<div class="all-100">
+      <img src="/assets/images/fig1disc.jpg" /></a>
+      <p>Figure 1: Parallel incorporation of local and global sensitivity analysis. Adapted from Heijungs [1996].</p>
+    </div>
+<p>
+<p>
+The importance of a parameter can originate from variability or epistemic uncertainty. A distinction between variability and uncertainty may in practice not be straightforward. However, it facilitates directions of mitigation strategies, which can be focused on essential parameters containing natural variability, and improvement of reliability, which can be focused on essential parameters that contain epistemic uncertainties (Figure 1).
+</p>
+<p>
+Examples of parameters that are important, but not influential, are N-fertilizer rates of crop cultivation (as we showed in <em>[paper under review]</em>). The importance of these parameters is caused by, for example, variability in N-fertilizer rates between years. An example of parameters that are influential, but not important are parameters that can be estimated very accurately, for example, the production of N-fertilizers, and can for example be improved by innovations.
+</p>
+<p>
+In <em>[paper under review]</em>, we focused on developing mitigation strategies and improving reliability of results. By combining local and global sensitivity analysis the most essential input parameters for environmental impact assessment in the pork production chain can be identified. Combining the results of these two analyses allowed to derive mitigation options, either based on innovations (e.g. novel feeding strategies) or on management strategies (e.g. reducing mortality rate), and to formulate options for improving reliability of results (e.g. decreasing epistemic uncertainties). Also reliability could be improved if data quality of the most essential parameters were improved.</p>
+<p>
+In <em>[paper under review]</em>, we focused on improving reliability of results only. By combining a local and a global sensitivity analysis, parameters could be determined which are essential to assess GHG of milk production, focusing only on the reliability of the results. Essential parameters are the emission factor of CH4 emissions from enteric fermentation, milk yield; DM feed intake of the dairy cows and the emission factor of direct N<sub>2</sub>O emission of crop cultivation. Future research can focus on reducing uncertainty and improving data quality of the most essential parameters.</p>
+<p>
+A local and global sensitivity analysis should, therefore, be seen as complementary. Moreover, in most environmental impact assessment models, data availability is limited and combining local and global sensitivity analysis makes sure that parameters are not overlooked.
+</p>
+
 <p><em>Source: General discussion PhD thesis Evelyne Groen "An uncertain climate: the value of uncertainty and sensitivity analysis in environmental impact assessment of food"</em>, 2016 (ISBN: 978-94-6257-755-8; DOI: http://dx.doi.org/10.18174/375497).</p>
 <p>[Tilman and Clark, 2014] [Bajželj et al., 2014[Steinfeld et al., 2006] [Gerber et al., 2013]][Wrisberg et al., 2002]Sutton et al., 2013] [Suh and Yee, 2011]Guinée et al., 2010]. [Aarts et al., 1992; Schröder et al., 2003; Lesschen et al., 2011][Lloyd and Ries, 2007; Björklund, 2002][De Koning et al., 2010] [Walker et al., 2003]Bojacá and Schrevens, 2010[Saltelli et al., 2008][Suh and Yee, 2011; Van Middelaar et al., 2012; Van Zanten et al., 2015; Yang et al., 2011][Heijungs and Suh, 2002; Heijungs, 2010][Heijungs, 1996] [Saltelli et al., 2008; Campolongo et al., 2007]Sobol’, 2001;[Henriksson et al., 2015; Heijungs and Kleijn, 2001]Wei et al., 2014 [Huang et al., 2013; Kim and Dale, 2002; Sayagh et al., 2010; Beltran et al., 2016]Flysjö et al., 2011; Basset-Mens et al., 2005]Mutel et al., 2013</p>
 </div>
