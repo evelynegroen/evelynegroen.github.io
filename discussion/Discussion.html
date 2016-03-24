@@ -5,11 +5,7 @@ title: Discussion
 <div class="column-group gutters">
 
     <div class="all-66 small-100 medium-66">
-        <style>
-small { 
-    font-size: smaller;
-}
-</style>
+
 <h4>Discussion of uncertainty analysis and sensitivity analysis in environmental impact assessment models</h4>
 <h6>1. Background</h6>
 <p>
@@ -199,133 +195,99 @@ Table 2: Methods for uncertainty analysis and sensitivity analysis corresponding
                     <tr>
                         <td> A.1. Which parameter changes the output value most? </td>
                         <td rowspan="5"> Multiplier method </td>
-                        <td> Point values </td>
+                        <td rowspan="5"> Point values </td>
                     </tr>
                     <tr>
                         <td> A.2. Which parameters are most influential?</td>
-                        <td>  </td>
                     </tr>
                       <tr>
                         <td>A.3. Of which parameters a high data quality is most urgent? </td>
-                        <td>  </td>
                     </tr>
                      <tr>
                         <td>A.4. Which parameters are unlikely to influence the model output?</td>
-                        <td></td>
                     </tr>
                     <tr>
                         <td> A.5. On which parameters should be focused for potential mitigation strategies, based on innovations? </td>
-                        <td></td>
                         </tr>
                         <tr>
                         <td colspan="3"> <em>B. Uncertainty analysis (neglecting correlation)</em> </td>
                         </tr>
                         <tr>
                         <td> B.1. Which product alternative is better when uncertainties are incorporated? </td>
-                        <td>Uncertainty propagation via e.g. Monte Carlo sampling</td>
-                        <td>Distribution functions, including a parameter of dispersion (e.g. variance)</td>
+                        <td rowspan="6">Uncertainty propagation via e.g. Monte Carlo sampling</td>
+                        <td rowspan="6">Distribution functions, including a parameter of dispersion (e.g. variance)</td>
                         </tr>
                         <td>B.2. What is the likelihood that one product alternative performs better than the other? </td>
-                          <td></td>
-                            <td></td>
                             <tr>
                         <td> B.3. Does the environmental impact of a product exceed the allowed boundary? </td>
-                          <td></td>
-                            <td></td>
                     </tr>
                      <tr>
                         <td>  B.4. What is the confidence interval of the mean model output?</td>
-                          <td></td>
-                            <td></td>
                             </tr>
                             <tr>
                         <td> B.5. What are the 2.5 and 97.5 percentile values of the model output?</td>
-                          <td></td>
-                            <td></td>
                             </tr>
                             <tr>
                         <td>B.6. What happens to the output variance when input uncertainties are reduced? </td>
-                        <td>  </td>
-                        <td> </td>
                     </tr>
                      <tr>
                         <td colspan="3"><em>C. Uncertainty analysis (including correlations) </em></td>
                           </tr>
                             <tr>
                         <td> C.1. Will correlations between input parameters increase or decrease the output variance? </td>
-                        <td> Uncertainty propagation, adjusted for correlated sampling </td>
-                        <td> Distributions functions, covariance matrix </td>
+                        <td rowspan="3"> Uncertainty propagation, adjusted for correlated sampling; <em>or:</em> analytical uncertainty propagation, adjusted correlated input parameters </td>
+                        <td> rowspan="3" Distributions functions, covariance matrix; <em>or</em>: covariance matrix </td>
                           </tr>
                             <tr>
                         <td> C.2. How big is the effect of ignoring correlations on the output variance?</td>
-                        <td> <em>or:</em> analytical uncertainty propagation, adjusted correlated input parameters </td>
-                        <td> or: covariance matrix</td>
                           </tr>
                             <tr>
                         <td> C.3. Will correlations affect results or decisions? </td>
-                        <td>  </td>
-                        <td> </td>
                           </tr>
                             <tr>
-                        <td colspan="3"> <em>D. Global sensitivity analysis</em> </td>
+                        <td colspan="3"> <em>D. Global sensitivity analysis (neglecting correlations)</em> </td>
                           </tr>
                             <tr>
                         <td>D.1. On which parameters should improved data collection be focused?</td>
-                        <td> Method of elementary effect </td>
-                        <td> Range (min and max value)</td>
+                        <td rowspan="3"> Method of elementary effect; <em>or:</em> regression- (or correlation-) based method; <em>or:</em> key issue analysis</td>
+                        <td rowspan="3"> Range (minimum and maximum value); <em>or:</em> distribution functions; <em>or:</em> variance</td>
                     </tr>
                     <tr>
                         <td> D.2. Which parameters are most important for the output uncertainty?</td>
-                        <td> <em>or:</em> Regression (or correlation) based method </td>
-                        <td><em>or:</em>distribution functions </td>
                           </tr>
                             <tr>
                         <td> D.3. Of which parameters should (epistemic) uncertainties be reduced to im- prove reliability of results? </td>
-                        <td> <em>or:</em> Key issue analysis </td>
-                        <td>  <em>or:</em> variance</td>
                           </tr>
                             <tr>
                         <td> D.4. Which parameters can be set to a fixed value to decrease data collection efforts of future studies? </td>
-                        <td>  Regression (or correlation) based method </td>
-                        <td> Distribution functions</td>
+                        <td rowspan="3">  Regression (or correlation) based method; <em>or:</em>key issue analysis </td>
+                        <td rowspan="3"> Distribution functions; <em>or:</em>variance</td>
                           </tr>
                             <tr>
                         <td> D.5. Which parameters contribute most to the output variance? </td>
-                        <td> <em>or:</em> Key issue analysis </td>
-                        <td> <em>or:</em>variance</td>
                           </tr>
                             <tr>
                         <td> D.6. Can decreasing epistemic uncertainties of the most important input parameters reduce the output variance? </td>
-                        <td>  </td>
-                        <td> </td>
                           </tr>
                             <tr>
                         <td colspan="3"><em>E. Global sensitivity analysis (including correlations)</em></td>
                           </tr>
                             <tr>
                         <td>E.1. Which parameters can be set to a fixed value to decrease data collection efforts of future studies?</td>
-                        <td> Regression (or correlation) based method </td>
-                        <td> Distributions functions, covariance matrix</td>
+                        <td rowspan="5"> Regression (or correlation) based method; <em>or:</em> Key issue analysis adjusted for correlated input parameters</td>
+                        <td rowspan="5"> Distributions functions, covariance matrix; <em>or:</em> covariance matrix</td>
                           </tr>
                             <tr>
                         <td>E.2. Which parameters contribute most to the output variance?</td>
-                        <td> <em>or:</em> Key issue analysis adjusted for correlated input parameters</td>
-                        <td> <em>or:</em> covariance matrix</td>
                           </tr>
                             <tr>
                         <td>E.3. Does correlation influence the importance of input parameters?</td>
-                        <td>  </td>
-                        <td> </td>
                           </tr>
                             <tr>
                         <td>E.4. Can correlations be ignored?</td>
-                        <td>  </td>
-                        <td> </td>
                           </tr>
                             <tr>
                         <td>E.5. On which correlation coefficients should data collection be focused?</td>
-                        <td>  </td>
-                        <td> </td>
                         
                     </tr>
                     
