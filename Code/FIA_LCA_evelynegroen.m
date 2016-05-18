@@ -3,7 +3,7 @@
 
 A=[10 0; -2 100];       %A-matrix
 B=[1 10];               %B-matrix
-f=[1000; 0];            %Scaling vector f
+f=[1000; 0];            %Functional unit vector f
 
 g_LCA=B*(A\f);          %Determinstic answer (kg CO_2)
 
