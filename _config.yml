@@ -7,6 +7,7 @@ blog_more_posts: 5
 prettify_theme: "ghink"
 markdown: kramdown
 pygments: true
+highlighter: rouge 
 paginate: 5
 paginate_path: "blog/page/:num"
 timezone: Europe/Amsterdam
