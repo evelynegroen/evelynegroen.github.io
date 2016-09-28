@@ -1,6 +1,7 @@
-%Analytical uncertainty propagation using matrix-based LCA % 
-%Author: Evelyne Groen {evelyne [dot] groen [at] gmail [dot] com}
-%This code is based on Heijungs and Suh (2002); http://dx.doi.org/10.1007/978-94-015-9900-9
+%Procedure: Uncertainty propagation for matrix-based LCA
+%Method:    Analytical uncertainty propagation 
+%Author:    Evelyne Groen {evelyne [dot] groen [at] gmail [dot] com}
+%NB:        This code is based on Heijungs and Suh (2002); http://dx.doi.org/10.1007/978-94-015-9900-9
 
 A=[10 0; -2 100];       %A-matrix
 B=[1 10];               %B-matrix

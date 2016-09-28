@@ -10,7 +10,7 @@ f=[1000; 0];        %Functional unit vector f
 
 g_LCA=B*(A\f);      %Total CO_2 emissions (deterministic result)
 
-N=10;             %Sample size%
+N=1000;             %Sample size%
 
 %Monte Carlo simulation assuming normal distributions (normrnd)
 %The mean equals the initial values of A and B
@@ -21,7 +21,6 @@ CV=0.05;            %Relative variation (CV=std/mu): 5%
 for i=1:N; %repetitions %
     A_sam=normrnd(A, abs(CV*A));  %A_sam is the sampled matrix A
     B_sam=normrnd(B, abs(CV*B));  %B_sam is the sampled matrix B
-    A_sam\f
     g(i)=B_sam*(A_sam\f);         %g(i) contains the result for each Nth iteration
 end
 
