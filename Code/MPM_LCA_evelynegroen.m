@@ -1,8 +1,11 @@
-%Multiplier method using matrix-based LCA % 
-%Author: Evelyne Groen {evelyne [dot] groen [at] gmail [dot] com}
+%Procedure:     Local sensitivity analysis for matrix-based LCA
+%Method:        Multiplier method (MPM): first order Taylor (analytic)
+%Author:        Evelyne Groen {evelyne [dot] groen [at] gmail [dot] com}
+%Last update:   14/10/2016 
+%Toolbox:       none
 
-%This code is created by: Reinout Heijungs and Sangwon Suh, source: "The computational
-%structure of life cycle assessment", ISBN: 978-90-481-6041-9 (Print) 978-94-015-9900-9 (Online)
+%NB:            This code is based on Heijungs and Suh (2002); http://dx.doi.org/10.1007/978-94-015-9900-9
+
 
 A=[10 0; -2 100];   %A-matrix
 B=[1 10];           %B-matrix
@@ -11,43 +14,13 @@ g_LCA=B*(A\f);      %Deterministic answer
 
 s=A\f;              %Scaling vector s
 
-Lambda=B*inv(A);
-dgdA=zeros(size(A,1));
-dgdB=zeros(1,size(A,1));
+%NB: this is a vectorized implementation of the original work of Reinout Heijungs & Sangwong Suh
 
-for k=1:size(g_LCA), 
-     for i=1:size (A, 1),
-         for j=1:size(A,2),
-             dgdA(i,j,k)=-Lambda(k,i)*s(j);
-         end 
-     end
- end; 
- 
- for k=1:size(g_LCA);
-     R(:,:,k)=A/g_LCA(k);
- end
- 
-for k=1:size(g_LCA);
-    GammaA(:,:,k)=R(:,:,k).*dgdA(:,:,k);
-end
- 
- for k=1: size(g_LCA), 
-     for i=1: size(B,1), 
-         for j=1: size(B,2), 
-             if i==k
-                 dgdB(i,j,k)=s(j);
-             else
-                 dgdB(i,j,k)=0;
-             end
-         end
-     end
- end; 
+s=A_det\f;                      %inv(A_det)*f
+Lambda=B_det/A_det;             %B_det*inv(A)
 
- for k=1:size(g_LCA);
-     P(:,:,k)=B/g_LCA(k);
- end
- 
-for k=1:size(g_LCA);
-    GammaB(:,:,k)=P(:,:,k).*dgdB(:,:,k);
-end
+dgdA=-Lambda'*s';               %Partial derivatives A-matrix
+Gamma_A=(A_det./g_LCA).*dgdA    %Multipliers of the A-matrix
 
+dgdB=s';                        %Partial derivatives B-matrix
+Gamma_B=(B_det./g_LCA).*dgdB    %Multipliers of the B-matrix

@@ -1,60 +1,35 @@
-%Procedure: Uncertainty propagation for matrix-based LCA
-%Method:    Analytical uncertainty propagation 
-%Author:    Evelyne Groen {evelyne [dot] groen [at] gmail [dot] com}
-%NB:        This code is based on Heijungs and Suh (2002); http://dx.doi.org/10.1007/978-94-015-9900-9
+%Procedure:     Uncertainty propagation for matrix-based LCA
+%Method:        Analytic uncertainty propagation (AUP): first order Taylor (analytic)
+%Author:        Evelyne Groen {evelyne [dot] groen [at] gmail [dot] com}
+%Last update:   14/10/2016 
+%Toolbox:       none
 
-A=[10 0; -2 100];       %A-matrix
-B=[1 10];               %B-matrix
-f=[1000; 0];            %Scaling vector f
+%NB:            This code is based on Heijungs and Suh (2002); http://dx.doi.org/10.1007/978-94-015-9900-9
 
-CV=0.05;                %CV: coefficient of variation
-varA=abs(A*CV).^2;      %Variance of parameters in A-matrix
-varB=abs(B*CV).^2;      %Variance of parameters in B-matrix
+A_det=[10 0; -2 100];       %A-matrix
+B_det=[1 10];               %B-matrix
+f=[1000; 0];                %Functional unit vector f
+g_LCA=B_det*(A_det\f);      %Deterministic result  
 
-s=A\f;
-g=B*s;
+CV=0.05;                    %CV: coefficient of variation (%)
 
-tic
-Lambda=B*inv(A);
+var_A=abs(CV*A_det).^2;
+var_B=abs(CV*B_det).^2;
 
-dgdA=zeros(size(A,1));
-dgdB=zeros(1,size(A,1));
-vargA=zeros(1,size(A,1));
-vargB=zeros(1,size(A,1));
-varg=zeros(1);
+%Step 1: Calculate partial derivatives
+%NB: this is a vectorized implementation of the original work of Reinout Heijungs & Sangwong Suh
 
-for k=1:size(g), 
-     for i=1:size (A, 1),
-         for j=1:size(A,2),
-             dgdA(i,j,k)=-Lambda(k,i)*s(j);
-         end 
-     end
- end; 
-  
- 
- for k=1: size(g), 
-     for i=1: size(B,1), 
-         for j=1: size (B,2), 
-             if i==k
-                 dgdB(i,j,k)=s(j);
-             else
-                 dgdB(i,j,k)=0;
-             end
-         end
-     end
- end; 
+s=A_det\f;                      %inv(A_det)*f
+Lambda=B_det/A_det;             %B_det*inv(A)
 
-for k=1:size(g)
-    vargA(k)=sum(sum((dgdA(:,:,k).^2).*varA));
-end
- 
-for k=1:size(g)
-     vargB(k)=sum(sum((dgdB(:,:,k).^2).*varB));
- end
- 
+dgdA=-Lambda'*s';               %Partial derivatives A-matrix
+Gamma_A=(A_det./g_LCA).*dgdA;   %For free: the multipliers of the A-matrix
 
-for k=1:size(g),
-    varg(k)=vargA(k)+vargB(k);
-end
+dgdB=s';                        %Partial derivatives B-matrix
+Gamma_B=(B_det./g_LCA).*dgdB;   %For free t(o)(w)o: the multipliers of the B-matrix
 
-stdg=sqrt(varg);
+%Step 2: Determine output variance
+P=[dgdA(:); dgdB(:)];           %P contains partial derivatives of both A and B 
+var_P=[var_A(:); var_B(:)];     %var_P contaings the variances of each parameter in A and B
+
+var_g=sum((P.^2).*var_P)       %Total output variance (first order Taylor)

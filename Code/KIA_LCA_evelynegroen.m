@@ -2,7 +2,8 @@
 %Method:        GSA: key issue analysis  % 
 %               Uncertainty propagation: first order Taylor (analytic)
 %Author:        Evelyne Groen {evelyne [dot] groen [at] gmail [dot] com}
-%Last update:   28/09/2016 
+%Last update:   14/10/2016 
+%Toolbox:       none
 
 
 A_det=[10 0; -2 100];       %A-matrix
