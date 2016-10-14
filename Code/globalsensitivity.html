@@ -7,7 +7,7 @@ title: Global sensitivity analysis
     <div class="all-20"></div>
     <div class="all-60 small-100 medium-60">   
     
-        <p> <font size="2"><b>Note to the user</b>: all MatLab code is written in  MatLab R2014, and some require additional packages (which is mentioned in the scripts). In case you don’t have access to MatLab, there is a free alternative called <a href="https://www.gnu.org/software/octave/Octave"> Octave</a> available. Both the ipython notebook and the python scripts are written in Python 3.</font></p> 
+        <p> <font size="2"><b>Note to the user</b>: all MatLab code is written in  MatLab R2014, and some require additional toolboxes (e.g. the statistics toolbox, which is mentioned in the scripts). In case you don’t have access to MatLab, there is a free alternative called <a href="https://www.gnu.org/software/octave/Octave"> Octave</a> available. Both the ipython notebook and the python scripts are written in Python 3.</font></p> 
 
     <h4>Global sensitivity analysis (independent input parameters) </h4>
    <p>A <a href="/introduction/Introduction.html">global sensitivity analysis </a> quantifies how much the uncertainty around each input parameter contributes to the output variance. To perform a global sensitivity analysis, regression-based methods may be used, but other variance decomposition methods, such as the Sobol' method, can be used as well.</p>
@@ -15,24 +15,24 @@ title: Global sensitivity analysis
 <h6>1. Regression-based methods</h6>
 <p>The MATLAB code for performing a global sensitivity analysis using the <b>squared standardised regression coefficients (SSRC)</b> in matrix-based <b>life cycle assessment</b> can be found here: </p>
         
-        <p>Matlab/Octave: <a href="/Code/SSRC_LCA_evelynegroen.m"> MatLab code SSRC LCA [paper under revision] </a>.</p>
-        <p>IPython notebook: <a href="/Code/SSRC_LCA_evelynegroen.ipynb"> IPython code SSRC LCA [paper under revision/under construction] </a>.</p>
-         <p>Python: <a href="/Code/SSRC_LCA_evelynegroen.py"> Python code SSRC LCA [paper under revision] </a>.</p>
+        <p>Matlab/Octave: <a href="/Code/SSRC_LCA_evelynegroen.m"> MatLab code SSRC LCA </a>[paper under revision].</p>
+        <p>IPython notebook: <a href="/Code/SSRC_LCA_evelynegroen.ipynb"> IPython code SSRC LCA </a> [paper under revision/under construction] .</p>
+        <p>Python: <a href="/Code/SSRC_LCA_evelynegroen.py"> Python code SSRC LCA </a>[paper under revision].</p>
         
 <p>The MATLAB code for performing a global sensitivity analysis using the <b>squared Spearman correlation coefficients (SSCC) </b> in matrix-based <b>life cycle assessment</b> can be found here:
 
     
-        <p>Matlab/Octave: <a href="/Code/SSCC_LCA_evelynegroen.m"> MatLab code SSCC LCA [paper under revision] </a>.</p>
-        <p>IPython notebook: <a href="/Code/SSCC_LCA_evelynegroen.ipynb"> IPython code SSCC LCA [paper under revision/under construction] </a>.</p>
-         <p>Python: <a href="/Code/SSCC_LCA_evelynegroen.py"> Python code SSCC LCA [paper under revision/under construction] </a>.</p>
+        <p>Matlab/Octave: <a href="/Code/SSCC_LCA_evelynegroen.m"> MatLab code SSCC LCA </a>[paper under revision].</p>
+        <p>IPython notebook: <a href="/Code/SSCC_LCA_evelynegroen.ipynb"> IPython code SSCC LCA </a>[paper under revision/under construction] .</p>
+        <p>Python: <a href="/Code/SSCC_LCA_evelynegroen.py"> Python code SSCC LCA </a> [paper under revision/under construction].</p>
         
 <h6>2. Key issue analysis using a first order Taylor expansion</h6>
 <p>The MATLAB code for performing a global sensitivity analysis using a <b>first order Taylor expansion</b> (also knowns as key issue analysis; KIA) in matrix-based <b>life cycle assessment</b> can be found here: </p>
 
         
-        <p>Matlab/Octave: <a href="/Code/KIA_LCA_evelynegroen.m"> MatLab code SSCC LCA [paper under revision] </a>.</p>
-        <p>IPython notebook: <a href="/Code/KIA_LCA_evelynegroen.ipynb"> IPython code SSCC LCA [paper under revision/under construction] </a>.</p>
-         <p>Python: <a href="/Code/KIA_LCA_evelynegroen.py"> Python code SSCC LCA [paper under revision] </a>.</p>
+        <p>Matlab/Octave: <a href="/Code/KIA_LCA_evelynegroen.m"> MatLab code KIA LCA </a>[paper under revision] .</p>
+        <p>IPython notebook: <a href="/Code/KIA_LCA_evelynegroen.ipynb"> IPython code KIA LCA </a>[paper under revision/under construction]. </p>
+        <p>Python: <a href="/Code/KIA_LCA_evelynegroen.py"> Python code KIA LCA </a>[paper under revision].</p>
         
 <h6>3. Other variance decomposition methods</h6>
 <p> The MatLab code for performing a global sensitivity analysis using the <b>Sobol' indices</b> in matrix-based <b>life cycle assessment</b> can be found here: <em>[paper under revision]</em>.</p>
@@ -45,20 +45,25 @@ title: Global sensitivity analysis
         <h6>1. Sampling method (adjusted for correlated input parameters) </h6>
 <p>The MATLAB code for performing a global sensitivity analysis using the <b>regression coefficients</b> in matrix-based <b>life cycle assessment</b> with correlated input parameters can be found here: </p>
         
-        <p>Matlab/Octave: <a href="/Code/_LCA_evelynegroen.m"> MatLab code correlated LCA (regression) [paper under revision/under construction] </a>.</p>
-        <p>IPython notebook: <a href="/Code/_LCA_evelynegroen.ipynb"> IPython code correlated LCA (regression) [paper under revision/under construction] </a>.</p>
-         <p>Python: <a href="/Code/_LCA_evelynegroen.py"> Python code correlated LCA (regression) [paper under revision/under construction] </a>.</p>
+        <p>Matlab/Octave: <a href="/Code/GSA_corr_reg_LCA_evelynegroen.m"> MatLab code correlated LCA (regression)</a> [paper under revision/under construction].</p>
+        <p>IPython notebook: <a href="/Code/GSA_corr_reg_LCA_evelynegroen.ipynb"> IPython code correlated LCA (regression)</a> [paper under revision/under construction].</p>
+         <p>Python: <a href="/Code/GSA_corr_reg_LCA_evelynegroen.py"> Python code correlated LCA (regression)</a> [paper under revision/under construction].</p>
         
         <h6>2. Analytical methods (adjusted for correlated input parameters) </h6>
 <p>The MATLAB code for performing a global sensitivity analysis using the <b>key issue analysis</b> extended for correlated input parameters in matrix-based <b>life cycle assessment</b> with correlated input parameters can be found here: </p>
         
-        <p>Matlab/Octave: <a href="/Code/_LCA_evelynegroen.m"> MatLab code correlated LCA (analytic) [paper under revision/under construction] </a>.</p>
-        <p>IPython notebook: <a href="/Code/_LCA_evelynegroen.ipynb"> IPython code correlated LCA (analyic) [paper under revision/under construction] </a>.</p>
-         <p>Python: <a href="/Code/_LCA_evelynegroen.py"> Python code correlated LCA (analytic) [paper under revision/under construction] </a>.</p>
+        <p>Matlab/Octave: <a href="/Code/GSA_ana_LCA_evelynegroen.m"> MatLab code correlated LCA (analytic) </a>[paper under revision/under construction].</p>
+        <p>IPython notebook: <a href="/Code/GSA_ana_LCA_evelynegroen.ipynb"> IPython code correlated LCA (analyic)</a> [paper under revision/under construction].</p>
+         <p>Python: <a href="/Code/GSA_ana_LCA_evelynegroen.py"> Python code correlated LCA (analytic) </a>[paper under revision/under construction].</p>
         
-    
-<p><em>Source:</em> Chapter 5 of PhD thesis Evelyne Groen <em>"An uncertain climate: the value of uncertainty and sensitivity analysis in environmental impact assessment of food"</em>, 2016</p>
+<small>    
+<p><b>Source:</b>PhD thesis Evelyne Groen, <b>An uncertain climate: the value of uncertainty and sensitivity analysis in environmental impact assessment of food</b>, 2016</p>
 <p>ISBN: 978-94-6257-755-8;  <a href="http://dx.doi.org/10.18174/375497">DOI: 10.18174/375497</a></p>
 
+    <p> The MatLab code for performing global sensitivity analysis for a model with correlated input parameters was used in <a href="http://dx.doi.org/10.1007/s11367-016-1165-y"> Assessing greenhouse gas emissions of milk prodution: which parameters are essential?</a>, <em> The international Journal of Life Cycle Assessment</em>, First online: 31 July, 2016.</p>
+        </small>
+        
+        
+        
 </div>
 </div>
