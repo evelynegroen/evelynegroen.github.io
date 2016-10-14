@@ -8,7 +8,7 @@ title: Uncertainty propagation
     
         <p> <font size="2"><b>Note to the user</b>: all MatLab code is written in  MatLab R2014, and some require additional packages (which is mentioned in the scripts). In case you don’t have access to MatLab, there is a free alternative called <a href="https://www.gnu.org/software/octave/Octave"> Octave</a> available. Both the ipython notebook and the python scripts are written in Python 3.</font></p> 
 
-        <h4>Uncertainty propagation </h4>
+        <h4>Uncertainty propagation (independent input parameters)</h4>
     <p><a href="/introduction/Introduction.html">Uncertainty propagation</a> can be used to propagate uncertainties of input parameters through models to determine e.g. the output uncertainty. To propagate the input uncertainties, simulation techniques can be used such as Monte Carlo sampling, but more exotic sampling techniques, such as Latin hypercube sampling (<b>Figure 1</b>) can also be used. In additon, a Taylor approximation of the original model can be used to propogate the uncertainties analytically. </p>
     
         <h6>1. Monte Carlo sampling</h6>
@@ -32,8 +32,24 @@ title: Uncertainty propagation
     <p> The MatLab/Octave code for performing <b>Quasi Monte Carlo sampling (QMCS)</b> in matrix-based <b>life cycle assessment</b> can be found here: <a href="/Code/QMCS_LCA_evelynegroen.m"> MATLAB code QMCS LCA </a></p>
     <p> The MatLab/Octave code for performing <b>Fuzzy interval arithmetic (FIA)</b> in matrix-based <b>life cycle assessment</b> can be found here: <a href="/Code/FIA_LCA_evelynegroen.m"> MATLAB code FIA LCA </a></p>
         
+        <h4>Uncertainty propagation (correlated input parameters) </h4>
+    <p><a href="/introduction/Introduction.html">Uncertainty propagation</a> can be used to propagate uncertainties of input parameters, even if they are correlated. To propagate the input uncertainties of parameters that are correlated, two techniques are used: normal random and a Taylor approximation of the original model can be used to propogate the uncertainties analytically. </p>
+    
+        <h6>1. Monte Carlo sampling</h6>
 
-<p><em>Source:</em> Chapter 3 and 7 of PhD thesis Evelyne Groen <em>"An uncertain climate: the value of uncertainty and sensitivity analysis in environmental impact assessment of food"</em>, 2016</p>
+        <p> Code for performing <b>Monte Carlo sampling (MCS) </b> in matrix-based <b>life cycle assessment (LCA)</b> with correlated input parametes can be found here:  </p>
+        <p> Matlab/Octave: <a href="/Code/MCS_corr_LCA_evelynegroen.m"> MatLab code MCS LCA (correlated) </a> </p>
+        <p> IPython notebook: <a href="/Code/MCS_corr_LCA_evelynegroen.ipynb"> IPython code MCS LCA (correlated)</a> </p>
+        <p> Python: <a href="/Code/MCS_corr_LCA_evelynegroen.py"> Python code MCS LCA (correlated) </a> </p>
+        
+    <h6>2. Analytical uncertainty propagation</h6>
+        <p> Code for performing <b>Analytical uncertainty propagation (AUP) </b> in matrix-based <b>life cycle assessment (LCA)</b> with correlated input parameters can be found here:  </p>
+        <p> Matlab/Octave:<a href="/Code/AUP_corr_LCA_evelynegroen.m"> MatLab code AUP LCA  (correlated)</a> </p>
+        <p> IPython notebook: <a href="/Code/AUP_corr_LCA_evelynegroen.ipynb"> IPython code AUP LCA (correlated)</a> </p>
+        <p> Python: <a href="/Code/AUP_corr_LCA_evelynegroen.py"> Python code AUP LCA (correlated)</a> </p>
+    
+
+<p><em>Source:</em> PhD thesis Evelyne Groen <em>"An uncertain climate: the value of uncertainty and sensitivity analysis in environmental impact assessment of food"</em>, 2016</p>
 <p>ISBN: 978-94-6257-755-8; <a href="http://dx.doi.org/10.18174/375497">DOI: 10.18174/375497</a> </p>
 
 <p>The MATLAB code for performing MCS, LHS, QMCS, FIA and AUP in LCA was used in <a href="http://dx.doi.org/10.1016/j.envsoft.2014.10.006">Methods for uncertainty propagation in life cycle assessment</a>, <em>Environmental Modelling & Software</em>, December 2014 (Volume 62, Pages 316 - 325).</p>
