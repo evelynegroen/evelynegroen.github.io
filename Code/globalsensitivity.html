@@ -13,13 +13,13 @@ title: Global sensitivity analysis
    <p>A <a href="/introduction/Introduction.html">global sensitivity analysis </a> quantifies how much the uncertainty around each input parameter contributes to the output variance. To perform a global sensitivity analysis, regression-based methods may be used, but other variance decomposition methods, such as the Sobol' method, can be used as well.</p>
 
 <h6>1. Regression-based methods</h6>
-<p>The MATLAB code for performing a global sensitivity analysis using the <b>squared standardised regression coefficients (SSRC)</b> in matrix-based <b>life cycle assessment</b> can be found here: </p>
+<p>The code for performing a global sensitivity analysis using the <b>squared standardised regression coefficients (SSRC)</b> in matrix-based <b>life cycle assessment</b> can be found here: </p>
         
         <p>Matlab/Octave: <a href="/Code/SSRC_LCA_evelynegroen.m"> MatLab code SSRC LCA </a>[paper under revision].</p>
         <p>IPython notebook: <a href="/Code/SSRC_LCA_evelynegroen.ipynb"> IPython code SSRC LCA </a> [paper under revision/under construction] .</p>
         <p>Python: <a href="/Code/SSRC_LCA_evelynegroen.py"> Python code SSRC LCA </a>[paper under revision].</p>
         
-<p>The MATLAB code for performing a global sensitivity analysis using the <b>squared Spearman correlation coefficients (SSCC) </b> in matrix-based <b>life cycle assessment</b> can be found here:
+<p>The code for performing a global sensitivity analysis using the <b>squared Spearman correlation coefficients (SSCC) </b> in matrix-based <b>life cycle assessment</b> can be found here:
 
     
         <p>Matlab/Octave: <a href="/Code/SSCC_LCA_evelynegroen.m"> MatLab code SSCC LCA </a>[paper under revision].</p>
@@ -27,7 +27,7 @@ title: Global sensitivity analysis
         <p>Python: <a href="/Code/SSCC_LCA_evelynegroen.py"> Python code SSCC LCA </a> [paper under revision/under construction].</p>
         
 <h6>2. Key issue analysis using a first order Taylor expansion</h6>
-<p>The MATLAB code for performing a global sensitivity analysis using a <b>first order Taylor expansion</b> (also knowns as key issue analysis; KIA) in matrix-based <b>life cycle assessment</b> can be found here: </p>
+<p>The code for performing a global sensitivity analysis using a first order Taylor expansion, also knowns as <b>key issue analysis (KIA)</b> in matrix-based <b>life cycle assessment</b> can be found here: </p>
 
         
         <p>Matlab/Octave: <a href="/Code/KIA_LCA_evelynegroen.m"> MatLab code KIA LCA </a>[paper under revision] .</p>
@@ -42,18 +42,15 @@ title: Global sensitivity analysis
        <h4>Global sensitivity analysis (correlated input parameters) </h4>
         <p>A global sensitivity analysis quantifies how much the uncertainty around each input parameter contributes to the output variance. To perform a global sensitivity analysis when input parameters are correlated, regression-based methods may still be used, but need to be adapted. An alternative to the regression-based method is to use the analytical approach described below. </p>
         <h6>1. Sampling method (adjusted for correlated input parameters) </h6>
-<p>The MATLAB code for performing a global sensitivity analysis using the <b>regression coefficients</b> in matrix-based <b>life cycle assessment</b> with correlated input parameters can be found here: </p>
+<p>The MatLab code for performing a global sensitivity analysis using the <b>regression coefficients</b> in matrix-based <b>life cycle assessment</b> with correlated input parameters can be found here: </p>
         
         <p>Matlab/Octave: <a href="/Code/GSA_corr_reg_LCA_evelynegroen.m"> MatLab code correlated LCA (regression)</a> [paper under revision].</p>
-        <p>IPython notebook: <a href="/Code/GSA_corr_reg_LCA_evelynegroen.ipynb"> IPython code correlated LCA (regression)</a> [paper under revision/under construction].</p>
-         <p>Python: <a href="/Code/GSA_corr_reg_LCA_evelynegroen.py"> Python code correlated LCA (regression)</a> [paper under revision/under construction].</p>
         
         <h6>2. Analytical method (adjusted for correlated input parameters) </h6>
-<p>The MATLAB code for performing a global sensitivity analysis using the <b>key issue analysis</b> extended for correlated input parameters in matrix-based <b>life cycle assessment</b> with correlated input parameters can be found here: </p>
+<p>The MatLab code for performing a global sensitivity analysis using the <b>key issue analysis</b> extended for correlated input parameters in matrix-based <b>life cycle assessment</b> with correlated input parameters can be found here: </p>
         
         <p>Matlab/Octave: <a href="/Code/GSA_corr_ana_LCA_evelynegroen.m"> MatLab code correlated LCA (analytic) </a>[paper under revision].</p>
-        <p>IPython notebook: <a href="/Code/GSA_corr_ana_LCA_evelynegroen.ipynb"> IPython code correlated LCA (analyic)</a> [paper under revision/under construction].</p>
-         <p>Python: <a href="/Code/GSA_corr_ana_LCA_evelynegroen.py"> Python code correlated LCA (analytic) </a>[paper under revision/under construction].</p>
+  
         
 <small>    
 <p><b>Source:</b>PhD thesis Evelyne Groen, <b>An uncertain climate: the value of uncertainty and sensitivity analysis in environmental impact assessment of food</b>, 2016</p>
