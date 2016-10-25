@@ -2,7 +2,7 @@
 %               correlated input parameters
 %Method:        Latin hypercube sampling with covariance structure
 %Author:        Evelyne Groen {evelyne [dot] groen [at] gmail [dot] com}
-%Last update:   14/10/2016 
+%Last update:   20/10/2016 
 %Toolbox:       statistics_toolbox
 
 A=[10 0; -2 100];       %A-matrix
@@ -11,8 +11,8 @@ f=[1000; 0];            %Functional unit vector f
 
 g=B*(A\f);
 
-stdA=[0.12 0; 0.23 12]; % Standard distributions A-matrix%
-stdB=[0.01 1.2];        
+stdA=[0.12 0; 0.23 12]; % Standard deviations A-matrix
+stdB=[0.01 1.2];        % Standard deviations B-matrix
 
 rho1=0.8;               % Correlation between A(1) and B(1)
 rho2=0.9;               % Correlation between A(4) and B(2)
@@ -24,7 +24,7 @@ covar2=rho2*stdA(4)*stdB(2); % covariance between A(4) and B(2)
 
 N=5000;                         % Sample size
 A_mu=[10 -2 100];               % Remove zero means%
-mu=[A_mu(:);B(:)];
+mu=[A_mu(:); B(:)];
 
 kT=nnz(stdA)+nnz(stdB);         % Total number of parameters with non-zero means
 corr=eye(kT);
@@ -37,7 +37,7 @@ stddev=[stdA(:); stdB(:)];
 sigma=corr.*(stddev*stddev');   % Variance-covariance matrix
 [T,num] = cholcov(sigma);       % to test if lhsnorm can be used 
 
-[X,P]=lhsnorm(mu,sigma,N);      % Correlated sample design
+[X,P]=lhsnorm(mu,sigma,N);      % Correlated sample design: normal distributions
 
 zsA=find(A);
 zsB=find(B);

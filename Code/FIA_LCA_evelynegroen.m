@@ -1,5 +1,8 @@
-%Fuzzy interval arithmetic using matrix-based LCA % 
-%Author: Evelyne Groen {evelyne [dot] groen [at] gmail [dot] com}
+%Procedure:     Uncertainty propagation for matrix-based LCA 
+%Method:        Fuzzy interval arithmetic
+%Author:        Evelyne Groen {evelyne [dot] groen [at] gmail [dot] com}
+%Last update:   20/10/2016 
+%Toolbox:       none
 
 A=[10 0; -2 100];       %A-matrix
 B=[1 10];               %B-matrix
@@ -14,7 +17,7 @@ A_upper=A+A*R;          %Upper bound
 B_lower=B-B*R;          %Lower bound of parameters in the B-matrix
 B_upper=B+B*R;          %Upper bound
 
-g_upper=B_upper*(A_lower\f); % TEST
+g_upper=B_upper*(A_lower\f); % Boundaries of the output
 g_mean=B*(A\f);
 g_lower=B_lower*(A_upper\f);
 

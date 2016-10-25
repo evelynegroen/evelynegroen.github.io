@@ -2,7 +2,8 @@
 %Method:        GSA: Squared Spearman correlation coefficients  % 
 %               Uncertainty propagation: Monte Carlo simulation
 %Author:        Evelyne Groen {evelyne [dot] groen [at] gmail [dot] com}
-%Last update:   26/09/2016 
+%Last update:   20/10/2016 
+%Toolbox:       statistics_toolbox
 
 
 A_det=[10 0; -2 100];       %A-matrix

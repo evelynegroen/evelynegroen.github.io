@@ -1,5 +1,10 @@
-%Quasi Monte Carlo sampling using matrix-based LCA % 
-%Author: Evelyne Groen {evelyne [dot] groen [at] gmail [dot] com}
+%Procedure:     Uncertainty propagation for matrix-based LCA 
+%Method:        Quasi Monte Carlo sampling, using: 
+%                   Sobol' sampling
+%                   Matouse/Affine/Owen scrambling
+%Author:        Evelyne Groen {evelyne [dot] groen [at] gmail [dot] com}
+%Last update:   20/10/2016 
+%Toolbox:       statistics_toolbox
 
 A=[10 0; -2 100];       %A-matrix
 B=[1 10];               %B-matrix

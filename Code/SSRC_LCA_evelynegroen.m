@@ -2,7 +2,8 @@
 %Method:        GSA: Squared standardized regression coefficients  % 
 %               Uncertainty propagation: Monte Carlo simulation
 %Author:        Evelyne Groen {evelyne [dot] groen [at] gmail [dot] com}
-%Last update:   26/09/2016 
+%Last update:   20/10/2016
+%Toolbox:       statistics_toolbox
 
 
 A_det=[10 0; -2 100];       %A-matrix
@@ -44,7 +45,8 @@ P=[ones(N,1) A_res' B_res'];    % Combine samples for each input parameter in on
 
 %regression coefficients (RC):
 
-%RC = inv(P'*P)*P'*g;          % Alternative if you don't have the statistics toolbox
+%RC = inv(P'*P)*P'*g;          % This is what "regress" is doing in the
+                               % next line
 RC = regress(g, P);            % Regression coefficients for each non-zero parameters, first element equals the intersect
 
 SSRC_A=zeros(nnz(A_det),1);

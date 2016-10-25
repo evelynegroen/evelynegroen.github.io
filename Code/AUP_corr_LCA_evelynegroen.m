@@ -2,7 +2,7 @@
 %               correlated input parameters
 %Method:        Analytic uncertainty propagation (AUP correlated): first order Taylor (analytic)
 %Author:        Evelyne Groen {evelyne [dot] groen [at] gmail [dot] com}
-%Last update:   14/10/2016 
+%Last update:   20/10/2016 
 %Toolbox:       none
 
 A=[10 0; -2 100];       %A-matrix
@@ -11,7 +11,7 @@ f=[1000; 0];            %Functional unit vector f
 
 g=B*(A\f);
 
-stdA=[0.12 0; 0.23 12]; % Standard distributions A-matrix%
+stdA=[0.12 0; 0.23 12]; % Standard deviations A-matrix%
 varA=stdA.^2;           % Variance A-matrix
 stdB=[0.01 1.2];        
 varB=stdB.^2;
