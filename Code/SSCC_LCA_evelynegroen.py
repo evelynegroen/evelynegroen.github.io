@@ -34,8 +34,8 @@ B1 = [random.gauss(B_det[0,0], CV*B_det[0,0]) for i in range(N)]
 B2 = [random.gauss(B_det[0,1], CV*B_det[0,1]) for i in range(N)]
 
 
-As = [ np.matrix([[A1[i], 0],[A3[i], A4[i]]]) for i in range(N)]
-Bs = [ np.matrix([[B1[i], B2[i]]]) for i in range(N)]
+As = [np.matrix([[A1[i], 0],[A3[i], A4[i]]]) for i in range(N)]
+Bs = [np.matrix([[B1[i], B2[i]]]) for i in range(N)]
 
 f  = np.matrix('1000; 0')
 
