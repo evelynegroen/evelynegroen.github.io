@@ -51,14 +51,20 @@ var_g = np.sum(np.multiply(np.power(P, 2), var_P))              # Total output v
 print("The output variance equals:", var_g)
 
 # Step 3: Key issue analysis (variance decomposition)"
+KIA = np.multiply(np.power(P, 2), var_P)/var_g
+KIA_procent = [KIA[0][0,k]*100 for k in range(0,6)]
+print("The contribution to the output variance of each intput parameter equals (in %):")
+print(KIA_procent)
 
-var_j = np.multiply(np.power(P, 2), var_P)/var_g               #Contribution of each input parameter to the output variance \n",
-
-var_j2 = [var_j[0,0], var_j[0,1], var_j[0,2]  ,var_j[0,3] ,var_j[0,4] , var_j[0,5]]
-print("The contribution to the output variance (x100, in %) for each input parameter equals:", var_j2)
-import matplotlib
+#Visualize: make a bar plot
+import matplotlib.pyplot as plt
 import matplotlib.pyplot as plt
 
-#plt.bar(var_j)
-#plt.show()
-                                               #N.B. The order of parameters in Python differs from Matlab"
+x_label=[ 'A(1,1)', 'A(1,2)', 'A(2,1)', 'A(2,2)', 'B(1,1)', 'B(1,2)']
+x_pos = range(6)
+plt.bar(x_pos, KIA_procent, align='center')
+plt.xticks(x_pos, x_label)
+plt.title('Global sensitivity analysis: squared standardized regression coefficients')
+plt.ylabel('KIA (%)')
+plt.xlabel('Parameter')
+plt.show()
