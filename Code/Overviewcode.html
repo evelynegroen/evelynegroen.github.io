@@ -8,30 +8,26 @@ title: Overview available code
     <div class="all-60 small-100 medium-60">
     
     <h4> Overview available code </h4>
+       <small>
     <table class="ink-table">
-    <thead><tr class="box"><th>Input data is:</th><th>Method</th><th>MatLab</th><th>IPython</th><th>Python</th><th>Data requirement</th></tr></thead><tbody>
- <tr><td></td><td>Uncertainty propagation</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
- <tr><td>Independent</td><td>AUP</td><td>x</td><td>x</td><td>x</td><td>mean, dispersion parameter (e.g. standard deviation)</td></tr>
- <tr><td></td><td>FIA</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>possibility function (e.g. A trapeziod function requires central, minimum and maximum values)</td></tr>
- <tr><td></td><td>MCS</td><td>x</td><td>x</td><td>x</td><td>mean, dispersion parameter, probability density function (pdf)</td></tr>
- <tr><td></td><td>LHS</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>mean, dispersion parameter, pdf</td></tr>
- <tr><td></td><td>QMCS</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>mean, dispersion parameter, pdf</td></tr>
- <tr><td>Correlated</td><td>AUP_corr</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>mean, dispersion parameter, covariance</td></tr>
- <tr><td></td><td>LHS_corr</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>mean, dispersion parameter, normal distribution, covariance</td></tr>
- <tr><td></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
- <tr><td></td><td>Local SA/screening</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
- <tr><td></td><td>MPM</td><td>x</td><td>x</td><td>x</td><td>mean</td></tr>
- <tr><td>&nbsp;</td><td>MEE</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>range (minimum and maximum value)</td></tr>
- <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
- <tr><td>&nbsp;</td><td>Global SA</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
- <tr><td>Independent</td><td>SSRC</td><td>x</td><td>x</td><td>x</td><td>mean, dispersion parameter, pdf</td></tr>
- <tr><td>&nbsp;</td><td>SSCC</td><td>x</td><td>x</td><td>x</td><td>mean, dispersion parameter, pdf</td></tr>
- <tr><td>&nbsp;</td><td>KIA</td><td>x</td><td>x</td><td>x</td><td>mean, dispersion parameter</td></tr>
- <tr><td>&nbsp;</td><td>Sobol'</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>mean, dispersion parameter, pdf</td></tr>
- <tr><td>&nbsp;</td><td>RBD</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>mean, dispersion parameter, pdf</td></tr>
- <tr><td>Correlated</td><td>GSA_ana_corr</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>mean, dispersion parameter, covariance</td></tr>
- <tr><td>&nbsp;</td><td>GSA_sam_corr</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>mean, dispersion parameter, normal distribution, covariance</td></tr>
-</tbody></table>
+<thead><tr class="align-left"><th>Type</th><th>Input data is:</th><th>Method</th><th>MatLab</th><th>IPython</th><th>Python</th><th>Data requirement</th></tr></thead><tbody>
+ <tr><td>Uncertainty propagation</td><td>Independent</td><td>AUP</td><td>x</td><td>x</td><td>x</td><td>mean, dispersion parameter (e.g. standard deviation)</td></tr>
+ <tr><td>&nbsp;</td><td>&nbsp;</td><td>FIA</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>possibility function (e.g. A trapeziod function requires central, minimum and maximum values)</td></tr>
+ <tr><td>&nbsp;</td><td>&nbsp;</td><td>MCS</td><td>x</td><td>x</td><td>x</td><td>mean, dispersion parameter, probability density function (pdf)</td></tr>
+ <tr><td>&nbsp;</td><td>&nbsp;</td><td>LHS</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>mean, dispersion parameter, pdf</td></tr>
+ <tr><td>&nbsp;</td><td>&nbsp;</td><td>QMCS</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>mean, dispersion parameter, pdf</td></tr>
+ <tr><td>&nbsp;</td><td>Correlated</td><td>AUP_corr</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>mean, dispersion parameter, covariance</td></tr>
+ <tr><td>&nbsp;</td><td>&nbsp;</td><td>LHS_corr</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>mean, dispersion parameter, normal distribution, covariance</td></tr>
+ <tr><td>Local SA</td><td>n/a</td><td>MPM</td><td>x</td><td>x</td><td>x</td><td>mean</td></tr>
+ <tr><td>Screening</td><td>Independent</td><td>MEE</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>range (minimum and maximum value)</td></tr>
+ <tr><td>Global SA</td><td>Independent</td><td>SSRC</td><td>x</td><td>x</td><td>x</td><td>mean, dispersion parameter, pdf</td></tr>
+ <tr><td>&nbsp;</td><td>&nbsp;</td><td>SSCC</td><td>x</td><td>x</td><td>x</td><td>mean, dispersion parameter, pdf</td></tr>
+ <tr><td>&nbsp;</td><td>&nbsp;</td><td>KIA</td><td>x</td><td>x</td><td>x</td><td>mean, dispersion parameter</td></tr>
+ <tr><td>&nbsp;</td><td>&nbsp;</td><td>Sobol'</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>mean, dispersion parameter, pdf</td></tr>
+ <tr><td>&nbsp;</td><td>&nbsp;</td><td>RBD</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>mean, dispersion parameter, pdf</td></tr>
+ <tr><td>&nbsp;</td><td>Correlated</td><td>GSA_ana_corr</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>mean, dispersion parameter, covariance</td></tr>
+ <tr><td>&nbsp;</td><td>&nbsp;</td><td>GSA_sam_corr</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>mean, dispersion parameter, normal distribution, covariance</td></tr>
+</tbody></table> </small>
        
        <p>Abbreviations: </p>
 </div>
