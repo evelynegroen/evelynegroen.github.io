@@ -12,27 +12,27 @@ title: Overview available code
     <table class="ink-table">
 <thead><tr class="align-left"><th>Type</th><th>Input data is:</th><th>Method</th><th>MatLab</th><th>IPython</th><th>Python</th><th>Data requirement</th></tr></thead><tbody>
  <tr><td> <a href="/Code/Uncertaintypropagation.html">Uncertainty propagation</a> </td><td>Independent</td><td>AUP</td><td>x</td><td>x</td><td>x</td><td>mean, dispersion parameter (e.g. standard deviation)</td></tr>
- <tr><td>&nbsp;</td><td>&nbsp;</td><td>FIA</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>possibility function (e.g. A trapeziod function requires central, minimum and maximum values)</td></tr>
+ <tr><td>&nbsp;</td><td>&nbsp;</td><td>FIA</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>possibility function (e.g. a trapeziod function requires a central, minimum and maximum value)</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>MCS</td><td>x</td><td>x</td><td>x</td><td>mean, dispersion parameter, probability density function (pdf)</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>LHS</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>mean, dispersion parameter, pdf</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>QMCS</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>mean, dispersion parameter, pdf</td></tr>
  <tr><td>&nbsp;</td><td>Correlated</td><td>AUP_corr</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>mean, dispersion parameter, covariance</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>LHS_corr</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>mean, dispersion parameter, normal distribution, covariance</td></tr>
- <tr><td> <a href="/Code/localsensitivity.html">Local SA</a> </td><td>n/a</td><td>MPM</td><td>x</td><td>x</td><td>x</td><td>mean</td></tr>
+ <tr><td> <a href="/Code/localsensitivity.html">Local SA</a> </td><td>Independent</td><td>MPM</td><td>x</td><td>x</td><td>x</td><td>base value (could be the mean)</td></tr>
  <tr><td><a href="/Code/localsensitivity.html">Screening </a> </td><td>Independent</td><td>MEE</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>range (minimum and maximum value)</td></tr>
  <tr><td><a href="/Code/globalsensitivity.html">Global SA</a></td><td>Independent</td><td>SSRC</td><td>x</td><td>x</td><td>x</td><td>mean, dispersion parameter, pdf</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>SSCC</td><td>x</td><td>x</td><td>x</td><td>mean, dispersion parameter, pdf</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>KIA</td><td>x</td><td>x</td><td>x</td><td>mean, dispersion parameter</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>Sobol'</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>mean, dispersion parameter, pdf</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>RBD</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>mean, dispersion parameter, pdf</td></tr>
- <tr><td>&nbsp;</td><td>Correlated</td><td>GSA_ana_corr</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>mean, dispersion parameter, covariance</td></tr>
+ <tr><td>&nbsp;</td><td>Correlated</td><td>GSA_ana_corr</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>mean, dispersion parameter, covariance (assumes normal distributions)</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>GSA_sam_corr</td><td>x</td><td>&nbsp;</td><td>&nbsp;</td><td>mean, dispersion parameter, normal distribution, covariance</td></tr>
 </tbody></table> </small>
        <small>
        <p><b>Abbreviations:</b> </p>
-       <p>AUP: analytical uncertainty propagation; FIA: Fuzzy interval arithmetic; GSA: global sensitivity analysis; KIA: key issue analysis; LHS: Latin hypercube sampling; MCS: Monte Carlo sampling; MEE: 
-          method of elementary effects; MPM: mutliplier method; QMCS: quasi-Monte Carlo sampling; RBD: random balance design;
-          SA: sensitivity analysis; SSCC: squared Spearman correlation coefficients; SSRC: squared standardized regression coefficients.  </p>
+       <p>ana: analytical; AUP: analytical uncertainty propagation; FIA: Fuzzy interval arithmetic; GSA: global sensitivity analysis; KIA: key issue analysis; LHS: Latin hypercube sampling; MCS: Monte Carlo sampling; MEE: 
+          method of elementary effects; MPM: mutliplier method; pdf: probability density function; QMCS: quasi-Monte Carlo sampling; RBD: random balance design;
+          SA: sensitivity analysis; sam: sampling; SSCC: squared Spearman correlation coefficients; SSRC: squared standardized regression coefficients.  </p>
        </small>
 
        <hr>        
